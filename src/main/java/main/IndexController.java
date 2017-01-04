@@ -12,6 +12,7 @@ public class IndexController{
 	public ModelAndView main(){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("index");
+		System.out.println(mav);
 		return mav;
 	}
 }
