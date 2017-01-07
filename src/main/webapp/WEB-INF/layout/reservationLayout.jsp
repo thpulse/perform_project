@@ -44,6 +44,7 @@
 		<tiles:insertAttribute name="top"/>
          <!-- Page_title -->
 		
+		
 		<tiles:insertAttribute name="content"/>		       
 		<tiles:insertAttribute name="footer"/>	
        
