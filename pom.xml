@@ -149,6 +149,7 @@
 		    <artifactId>tiles-jsp</artifactId>
 		    <version>2.2.2</version>
 		  </dependency>
+
 		  
 		  <!-- Spring data -->
 		  <dependency>
@@ -156,6 +157,19 @@
 	        <artifactId>spring-data-mongodb</artifactId>
 	        <version>1.6.0.RELEASE</version>
 	      </dependency>
+
+		
+		<!-- xml pull parser -->
+		<!-- https://mvnrepository.com/artifact/pull-parser/pull-parser -->
+		<!-- https://mvnrepository.com/artifact/org.ogce/xpp3 -->
+		<dependency>
+		    <groupId>org.ogce</groupId>
+		    <artifactId>xpp3</artifactId>
+		    <version>1.1.6</version>
+		</dependency>
+
+		
+
 	</dependencies>
 	<build>
 		<plugins>

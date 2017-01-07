@@ -71,9 +71,9 @@
 	</beans:bean>	
 	
 	<!-- ======================어노테이션============================== -->
-	<context:component-scan base-package="kitri.main" />
 	<context:component-scan base-package="spring"/>
 	<context:component-scan base-package="kitri" />
+
 	
 	<!-- MongoDB -->
 	<context:component-scan base-package="spring.data.mongodb.taehyung_test"/>

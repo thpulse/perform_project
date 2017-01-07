@@ -11,7 +11,7 @@
 		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
 	</definition>
 	
-	<definition name="index" extends="mainTemplate">	
+	<definition name="index" extends="mainTemplate">
 	</definition>
 	
 	
@@ -22,4 +22,5 @@
 	<definition name="detail_mongo" template="/WEB-INF/views_taehyung/mongo_detail.jsp"/>
 	<definition name="update_mongo" template="/WEB-INF/views_taehyung/mongo_update.jsp"/>
 	<definition name="search_mongo" template="/WEB-INF/views_taehyung/mongo_search.jsp"/>
+
 </tiles-definitions>

@@ -1,4 +1,4 @@
-<%@page import="spring.data.mongodb.dto.ScoreDTO"%>
+<%@page import="spring.data.mongodb.taehyung_test.*"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
