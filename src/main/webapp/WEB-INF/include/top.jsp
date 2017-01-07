@@ -84,19 +84,19 @@
 							</ul>
 						</li>
 						<li>
-							<a href="portfolio.html"><i class="fa fa-camera"></i><br>Portfolio</a>
+							<a href="portfolio.html"><i class="fa fa-camera"></i><br>공연정보</a>
 						</li>
 						<li>
-							<a href="#"><i class="fa fa-comments"></i><br>Blog</a>
+							<a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>공연예매</a>
 						</li>
 						<li>
-							<a href="services.html"><i class="fa fa-tasks"></i><br>Services</a>
+							<a href="services.html"><i class="fa fa-tasks"></i><br>공연2.0</a>
 						</li>
 						<li>
-							<a href="about.html"><i class="fa fa-user"></i><br>About</a>
+							<a href="about.html"><i class="fa fa-user"></i><br>MyPage</a>
 						</li>
 						<li>
-							<a href="contact.html"><i class="fa fa-envelope"></i><br>Contact</a>
+							<a href="contact.html"><i class="fa fa-envelope"></i><br>~_~</a>
 						</li>
 						
 					</ul>
