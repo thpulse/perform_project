@@ -1,6 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
     <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 전인규 top/css start-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+	body{margin: 0;}
+	div {padding: 30px 0}
+	form {
+	  position: relative;
+	  width: 300px;
+	  margin: 8 auto;
+	}
+
+.d1 input {
+	  width: 100%;
+	  height: 42px;
+	  padding-left: 10px;
+	  border: 2px solid #99004C;
+	  border-radius: 5px;
+	  outline: none;
+	  background: #F9F0DA;
+	  color: #9E9C9C;
+}
+.d1 button {
+	  position: absolute; 
+	  top: 0;
+	  right: 0px;
+	  width: 42px;
+	  height: 42px;
+	  border: none;
+	  background: #99004C;
+	  border-radius: 0 5px 5px 0;
+	  cursor: pointer;
+}
+.d1 button:before {
+	  content: "\f002";
+	  font-family: FontAwesome;
+	  font-size: 16px;
+	  color: #F9F0DA;
+}
+</style>
+<!-- 전인규 top/css END -->
+</head>
     <body>
 		 <!-- Top menu -->
 		<nav class="navbar" role="navigation">
@@ -17,6 +62,16 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
+						<!-- 전인규 검색창 start -->
+						<li>
+							<div class="d1">
+  								<form>
+  									<input type="text" placeholder="검색어 입력">
+  										<button type="submit"></button>
+  								</form>
+							</div>
+						</li>
+						<!-- 전인규 검색창 end -->
 						<li class="dropdown active">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 								<i class="fa fa-home"></i><br>Home <span class="caret"></span>
@@ -41,7 +96,9 @@
 						<li>
 							<a href="contact.html"><i class="fa fa-envelope"></i><br>Contact</a>
 						</li>
+						
 					</ul>
+					
 				</div>
 			</div>
 		</nav>
