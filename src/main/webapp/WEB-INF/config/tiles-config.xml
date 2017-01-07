@@ -4,7 +4,7 @@
        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
        
 <tiles-definitions>
-	<!-- 템플릿 정의 -->
+	<!-- 기본템플릿 정의 By.kimtaehyung -->
 	<definition name="mainTemplate" template="/WEB-INF/layout/mainLayout.jsp">
 		<put-attribute name="top" 		value="/WEB-INF/include/top.jsp"/>
 		<put-attribute name="content" 	value="/WEB-INF/include/content.jsp"/>
@@ -14,4 +14,12 @@
 	<definition name="index" extends="mainTemplate">	
 	</definition>
 	
+	
+	<!-- 몽고DB테스트중 01.06 By.Kimtaehyung -->
+	<definition name="index_mongo" template="/WEB-INF/views_taehyung/index.jsp"/>	
+	<definition name="list_mongo" template="/WEB-INF/views_taehyung/list.jsp"/>	
+	<definition name="insert_mongo" template="/WEB-INF/views_taehyung/mongo_insert.jsp"/>
+	<definition name="detail_mongo" template="/WEB-INF/views_taehyung/mongo_detail.jsp"/>
+	<definition name="update_mongo" template="/WEB-INF/views_taehyung/mongo_update.jsp"/>
+	<definition name="search_mongo" template="/WEB-INF/views_taehyung/mongo_search.jsp"/>
 </tiles-definitions>
