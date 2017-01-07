@@ -68,7 +68,7 @@
 	
 	
 	<!-- ======================어노테이션============================== -->
-	<context:component-scan base-package="kr" />
+	<context:component-scan base-package="kitri" />
 	<context:component-scan base-package="main" />
 	<context:component-scan base-package="board" />
 	<context:component-scan base-package="product" />
