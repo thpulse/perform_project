@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="kitri.performance">
+<mapper namespace="kitri.boxweekly">
 	<insert id="Add_BoxWeekly" parameterType="box">
 		insert into prf_boxweek values(#{area},#{prfcount},#{nmrs},#{prfperiod},#{genre},#{prfplcnm},#{prfnm},#{rank},#{seatcnt},#{poster},#{prfid})
 	</insert>
