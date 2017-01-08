@@ -51,7 +51,7 @@ public class BoxWeeklyDAOImpl implements BoxWeeklyDAO {
 						(Long)obj.get("seatcnt"),(String)obj.get("poster"),
 						(String)obj.get("mt20id"));
 			}
-			sqlSession.insert("kitri.performance.Add_BoxWeekly",box);
+			sqlSession.insert("kitri.boxweekly.Add_BoxWeekly",box);
 		} catch (MalformedURLException e) {
 		e.printStackTrace();
 		}catch (ParseException e) {
@@ -61,6 +61,6 @@ public class BoxWeeklyDAOImpl implements BoxWeeklyDAO {
 
 	@Override
 	public List<BoxWeeklyDTO> Total_BoxWeekly(BoxWeeklyDTO dto) {
-		return sqlSession.selectList("kitri.performance.Total_BoxWeekly", dto);
+		return sqlSession.selectList("kitri.boxweekly.Total_BoxWeekly", dto);
 	}
 }
