@@ -2,22 +2,22 @@ package kitri.performinfo.boxweekly.dto;
 
 public class BoxWeeklyDTO {
 	private String area;
-	private String prfcount;
-	private String nmrs;
+	private Long prfcount;
+	private Long nmrs;
 	private String prfperiod;
 	private String genre;
 	private String prfplcnm;
 	private String prfnm;
-	private String rank;
-	private String seatcnt;
+	private Long rank;
+	private Long seatcnt;
 	private String poster;
 	private String prfid;
 	public BoxWeeklyDTO(){
 		
 	}
-	public BoxWeeklyDTO(String area, String prfcount, String nmrs,
+	public BoxWeeklyDTO(String area, Long prfcount, Long nmrs,
 			String prfperiod, String genre, String prfplcnm, String prfnm,
-			String rank, String seatcnt, String poster, String prfid) {
+			Long rank, Long seatcnt, String poster, String prfid) {
 		super();
 		this.area = area;
 		this.prfcount = prfcount;
@@ -45,16 +45,16 @@ public class BoxWeeklyDTO {
 	public void setArea(String area) {
 		this.area = area;
 	}
-	public String getPrfcount() {
+	public Long getPrfcount() {
 		return prfcount;
 	}
-	public void setPrfcount(String prfcount) {
+	public void setPrfcount(Long prfcount) {
 		this.prfcount = prfcount;
 	}
-	public String getNmrs() {
+	public Long getNmrs() {
 		return nmrs;
 	}
-	public void setNmrs(String nmrs) {
+	public void setNmrs(Long nmrs) {
 		this.nmrs = nmrs;
 	}
 	public String getPrfperiod() {
@@ -81,16 +81,16 @@ public class BoxWeeklyDTO {
 	public void setPrfnm(String prfnm) {
 		this.prfnm = prfnm;
 	}
-	public String getRank() {
+	public Long getRank() {
 		return rank;
 	}
-	public void setRank(String rank) {
+	public void setRank(Long rank) {
 		this.rank = rank;
 	}
-	public String getSeatcnt() {
+	public Long getSeatcnt() {
 		return seatcnt;
 	}
-	public void setSeatcnt(String seatcnt) {
+	public void setSeatcnt(Long seatcnt) {
 		this.seatcnt = seatcnt;
 	}
 	public String getPoster() {
