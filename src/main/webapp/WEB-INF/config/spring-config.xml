@@ -72,5 +72,6 @@
 	<context:component-scan base-package="main" />
 	<context:component-scan base-package="board" />
 	<context:component-scan base-package="product" />
+	<context:component-scan base-package="kitri" />
 	
 </beans:beans>
