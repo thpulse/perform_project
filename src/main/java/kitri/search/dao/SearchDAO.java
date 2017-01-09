@@ -1,5 +1,8 @@
 package kitri.search.dao;
 
-public interface SearchDAO {
+import java.util.List;
+import kitri.search.vo.SearchVO;
 
+public interface SearchDAO {
+	List<SearchVO> search(String Sword);
 }

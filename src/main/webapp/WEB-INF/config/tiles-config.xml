@@ -11,7 +11,21 @@
 		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
 	</definition>
 	
+	<!-- JeonInGyu mypageTemplate update Start -->
+	<definition name="mypageTemplate" template="/WEB-INF/layout/mypageLayout.jsp">
+		<put-attribute name="top" 		value="/WEB-INF/include/top.jsp"/>
+		<put-attribute name="mypage_menu" value="/WEB-INF/mypage/mypage_menu.jsp"/>
+		<put-attribute name="content" 	value="/WEB-INF/include/content.jsp"/>
+		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
+	</definition>
+	<!-- JeonInGyu mypageTemplate update end -->
+	
 	<definition name="index" extends="mainTemplate">	
 	</definition>
+	
+	<!-- JeonInGyu mypageTemplate update Start -->
+	<definition name="mypage" extends="mypageTemplate">	
+	</definition>
+	<!-- JeonInGyu mypageTemplate update Start -->
 	
 </tiles-definitions>
