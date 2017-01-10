@@ -41,5 +41,8 @@
 	<definition name="detail_mongo" template="/WEB-INF/views_taehyung/mongo_detail.jsp"/>
 	<definition name="update_mongo" template="/WEB-INF/views_taehyung/mongo_update.jsp"/>
 	<definition name="search_mongo" template="/WEB-INF/views_taehyung/mongo_search.jsp"/>
-
+	
+	<!-- review 01.09 By.KangJeongA -->
+	<definition name="review/Reviewinsert" template="/WEB-INF/review/Reviewinsert.jsp"/> 
+	
 </tiles-definitions>
