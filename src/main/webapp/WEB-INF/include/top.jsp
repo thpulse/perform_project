@@ -99,10 +99,33 @@
 						<li>
 							<a href="contact.html"><i class="fa fa-envelope"></i><br>~_~</a>
 						</li>
+
+						<li>
+							<a href="#" onclick="login" data-toggle="modal" data-target="#myModal"><i class="fa fa-lock"></i><br>Log-in</a>
 						
+						
+						<!-- Modal -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  							<div class="modal-dialog modal-lg" role="document">
+    						<div class="modal-content">
+      						<div class="modal-header">
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        					
+        					 ���̵� : <input id="login__username" type="text" class="form__input" placeholder="Username" required><br><br>
+        					 
+     					 	  ��й�ȣ : <input id="login__password" type="password" class="form__input" placeholder="Password" required>
+     					 	</div>     					
+      					 	 <div class="form__field">
+         				 			<p><input type="submit" onclick="location.href='/project_final/login.do'" class="btn btn-info" value="Log-In">
+         				 			   <input type="submit" onclick="location.href='/project_final/insert.do'" class="btn btn-info" value="Sign-up"></p>
+      						 </div>     						
+      					
+    						</div>
+  						</div>
+  					</div>
+					</li>					
 					</ul>
-					
-				</div>
+			</div>
 			</div>
 		</nav>
     </body>
