@@ -3,6 +3,7 @@
     <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <head>
 	 <meta charset="utf-8">
+	<title>http://www.blueb.co.kr</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
