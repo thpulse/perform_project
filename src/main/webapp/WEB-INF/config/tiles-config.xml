@@ -9,6 +9,7 @@
 		<put-attribute name="top" 		value="/WEB-INF/include/top.jsp"/>
 		<put-attribute name="content" 	value="/WEB-INF/include/content.jsp"/>
 		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
+		
 	</definition>
 	
 	<definition name="index" extends="mainTemplate">
@@ -23,15 +24,7 @@
 	</definition>
 	
 	<definition name="reservationMain" extends="reservationTemplate">
-	</definition>
-	
-	
-	
-	
-	
-	
-	
-	
+	</definition>	
 	
 	
 	<!-- 몽고DB테스트중 01.06 By.Kimtaehyung -->
@@ -44,5 +37,10 @@
 	
 	<!-- review 01.09 By.KangJeongA -->
 	<definition name="review/Reviewinsert" template="/WEB-INF/review/Reviewinsert.jsp"/> 
+  
+  <!-- 승현 -->
+	<definition name="register_member" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/user/include/signup.jsp"/>
+	</definition>
 	
 </tiles-definitions>
