@@ -91,9 +91,11 @@
 						<li>
 							<a href="services.html"><i class="fa fa-tasks"></i><br>공연2.0</a>
 						</li>
+						<!-- JeonInGyu <a href> update Start -->
 						<li>
-							<a href="about.html"><i class="fa fa-user"></i><br>MyPage</a>
+							<a href="/project_final/mypage/mypage.do"><i class="fa fa-user"></i><br>About</a>
 						</li>
+						<!-- JeonInGyu <a href> update End -->
 						<li>
 							<a href="contact.html"><i class="fa fa-envelope"></i><br>~_~</a>
 						</li>

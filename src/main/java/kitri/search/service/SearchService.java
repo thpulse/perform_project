@@ -1,5 +1,8 @@
 package kitri.search.service;
 
-public interface SearchService {
+import java.util.List;
+import kitri.search.vo.SearchVO;
 
+public interface SearchService {
+	List<SearchVO> search(String Sword);
 }
