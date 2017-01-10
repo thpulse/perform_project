@@ -87,7 +87,7 @@
 							<a href="portfolio.html"><i class="fa fa-camera"></i><br>Portfolio</a>
 						</li>
 						<li>
-							<a href="#"><i class="fa fa-comments"></i><br>Blog</a>
+							<a href="/project_final/review/write.do"><i class="fa fa-comments"></i><br>Blog</a>
 						</li>
 						<li>
 							<a href="services.html"><i class="fa fa-tasks"></i><br>Services</a>
