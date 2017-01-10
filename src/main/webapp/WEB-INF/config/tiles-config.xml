@@ -9,11 +9,22 @@
 		<put-attribute name="top" 		value="/WEB-INF/include/top.jsp"/>
 		<put-attribute name="content" 	value="/WEB-INF/include/content.jsp"/>
 		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
+		
+	</definition>
+  
+  <definition name="index" extends="mainTemplate">
+	</definition>		
+ 
+  <!--인규	-->
+  <definition name="mypageTemplate" template="/WEB-INF/layout/mypageLayout.jsp">
+		<put-attribute name="top" 		value="/WEB-INF/include/top.jsp"/>
+		<put-attribute name="mypage_menu" value="/WEB-INF/mypage/mypage_menu.jsp"/>
+		<put-attribute name="content" 	value="/WEB-INF/include/content.jsp"/>
+		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
 	</definition>
 	
-	<definition name="index" extends="mainTemplate">
-	</definition>
-	
+	<!-- JeonInGyu mypageTemplate update Start -->
+	<definition name="mypage" extends="mypageTemplate"/>	
 	
 	<!-- 공연예매 17.01.07 By.kimtaehyung-->
 	<definition name="reservationTemplate" template="/WEB-INF/layout/reservationLayout.jsp">
@@ -23,16 +34,7 @@
 	</definition>
 	
 	<definition name="reservationMain" extends="reservationTemplate">
-	</definition>
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	</definition>	
 	
 	<!-- 몽고DB테스트중 01.06 By.Kimtaehyung -->
 	<definition name="index_mongo" template="/WEB-INF/views_taehyung/index.jsp"/>	
@@ -41,5 +43,12 @@
 	<definition name="detail_mongo" template="/WEB-INF/views_taehyung/mongo_detail.jsp"/>
 	<definition name="update_mongo" template="/WEB-INF/views_taehyung/mongo_update.jsp"/>
 	<definition name="search_mongo" template="/WEB-INF/views_taehyung/mongo_search.jsp"/>
-
+	
+	<!-- review 01.09 By.KangJeongA -->
+	<definition name="review/Reviewinsert" template="/WEB-INF/review/Reviewinsert.jsp"/> 
+  
+  <!-- 승현 -->
+	<definition name="register_member" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/user/include/signup.jsp"/>
+	</definition>
 </tiles-definitions>
