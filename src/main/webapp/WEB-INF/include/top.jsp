@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- ÀüÀÎ±Ô top/css start-->
+
+<!-- ingyu top/css start-->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <style>
 * {box-sizing: border-box;}
@@ -44,7 +46,7 @@
 	  color: #F9F0DA;
 }
 </style>
-<!-- ÀüÀÎ±Ô top/css END -->
+<!-- ingyu top/css END -->
 </head>
     <body>
 		 <!-- Top menu -->
@@ -62,16 +64,16 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
-						<!-- ÀüÀÎ±Ô °Ë»öÃ¢ start -->
+						<!-- ingyu ê²€ìƒ‰ì°½ start -->
 						<li>
 							<div class="d1">
   								<form>
-  									<input type="text" placeholder="°Ë»ö¾î ÀÔ·Â">
+  									<input type="text" placeholder="ê²€ìƒ‰ì–´ ìž…ë ¥">
   										<button type="submit"></button>
   								</form>
 							</div>
 						</li>
-						<!-- ÀüÀÎ±Ô °Ë»öÃ¢ end -->
+						<!-- ingyu ê²€ìƒ‰ì°½ end -->
 						<li class="dropdown active">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 								<i class="fa fa-home"></i><br>Home <span class="caret"></span>
@@ -82,13 +84,12 @@
 							</ul>
 						</li>
 						<li>
-							<a href="portfolio.html"><i class="fa fa-camera"></i><br>Portfolio</a>
+							<a href="portfolio.html"><i class="fa fa-camera"></i><br>ê³µì—°ì •ë³´</a>
 						</li>
 						<li>
-							<a href="#"><i class="fa fa-comments"></i><br>Blog</a>
-						</li>
+              <a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>ê³µì—°ì˜ˆë§¤</a>
 						<li>
-							<a href="services.html"><i class="fa fa-tasks"></i><br>Services</a>
+							<a href="services.html"><i class="fa fa-tasks"></i><br>ê³µì—°2.0</a>
 						</li>
 						<!-- JeonInGyu <a href> update Start -->
 						<li>
@@ -96,7 +97,7 @@
 						</li>
 						<!-- JeonInGyu <a href> update End -->
 						<li>
-							<a href="contact.html"><i class="fa fa-envelope"></i><br>Contact</a>
+							<a href="contact.html"><i class="fa fa-envelope"></i><br>~_~</a>
 						</li>
 						
 					</ul>
