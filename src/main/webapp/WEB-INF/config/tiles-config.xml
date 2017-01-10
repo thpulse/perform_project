@@ -15,6 +15,25 @@
 	</definition>
 	
 	
+	<!-- 공연예매 17.01.07 By.kimtaehyung-->
+	<definition name="reservationTemplate" template="/WEB-INF/layout/reservationLayout.jsp">
+		<put-attribute name="top" 		value="/WEB-INF/include/top.jsp"/>
+		<put-attribute name="content" 	value="/WEB-INF/reservation/include/reservation_service.jsp"/>
+		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
+	</definition>
+	
+	<definition name="reservationMain" extends="reservationTemplate">
+	</definition>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<!-- 몽고DB테스트중 01.06 By.Kimtaehyung -->
 	<definition name="index_mongo" template="/WEB-INF/views_taehyung/index.jsp"/>	
 	<definition name="list_mongo" template="/WEB-INF/views_taehyung/list.jsp"/>	

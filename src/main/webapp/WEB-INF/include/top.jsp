@@ -64,16 +64,16 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
-						<!-- ingyu �˻�â start -->
+						<!-- ingyu 검색창 start -->
 						<li>
 							<div class="d1">
   								<form>
-  									<input type="text" placeholder="�˻��� �Է�">
+  									<input type="text" placeholder="검색어 입력">
   										<button type="submit"></button>
   								</form>
 							</div>
 						</li>
-						<!-- ingyu �˻�â end -->
+						<!-- ingyu 검색창 end -->
 						<li class="dropdown active">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 								<i class="fa fa-home"></i><br>Home <span class="caret"></span>
@@ -84,19 +84,18 @@
 							</ul>
 						</li>
 						<li>
-							<a href="portfolio.html"><i class="fa fa-camera"></i><br>Portfolio</a>
+							<a href="portfolio.html"><i class="fa fa-camera"></i><br>공연정보</a>
 						</li>
 						<li>
-							<a href="/project_final/review/write.do"><i class="fa fa-comments"></i><br>Blog</a>
+              <a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>공연예매</a>
+						<li>
+							<a href="services.html"><i class="fa fa-tasks"></i><br>공연2.0</a>
 						</li>
 						<li>
-							<a href="services.html"><i class="fa fa-tasks"></i><br>Services</a>
+							<a href="about.html"><i class="fa fa-user"></i><br>MyPage</a>
 						</li>
 						<li>
-							<a href="about.html"><i class="fa fa-user"></i><br>About</a>
-						</li>
-						<li>
-							<a href="contact.html"><i class="fa fa-envelope"></i><br>Contact</a>
+							<a href="contact.html"><i class="fa fa-envelope"></i><br>~_~</a>
 						</li>
 						
 					</ul>
