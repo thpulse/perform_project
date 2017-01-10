@@ -62,11 +62,15 @@ background:#933 url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-on
 		
 			<tiles:insertAttribute name="top"/>		
 		<div class="col-sm-2 sidenav">
+			<!-- JeonInGyu 170110 update Start -->
 			<tiles:insertAttribute name="mypage_menu"/>
+			<!-- JeonInGyu 170110 update End -->
 		</div>
         <!-- Slider -->
   		<div class="col-sm-10"> 
-            <tiles:insertAttribute name="mypage_content"/>
+  			
+            <tiles:insertAttribute name="content"/>
+            
  		</div>
         <!-- Footer -->
 
