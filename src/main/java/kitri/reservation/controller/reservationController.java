@@ -10,4 +10,9 @@ public class reservationController {
 	public String main(){
 		return "reservationMain";
 	}
+	
+	@RequestMapping("/reservation/seat.do")
+	public String seat(){
+		return "reservation_seat";
+	}
 }

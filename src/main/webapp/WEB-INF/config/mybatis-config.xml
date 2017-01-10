@@ -2,20 +2,12 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
-	<!-- JeonInGyu typeAliases update Start -->
 	<typeAliases>
 		<typeAlias type="kitri.search.vo.SearchVO" alias="search"/>
-	</typeAliases>
-	<mappers>
-		<mapper resource="mapper/search.xml"/>
-	</mappers>
-	<!-- JeonInGyu typeAliases update End -->
-
-	<typeAliases>
 		<typeAlias type="kitri.performinfo.boxweekly.dto.BoxWeeklyDTO" alias="box"/>
 	</typeAliases>
 	<mappers>
+		<mapper resource="mapper/search.xml"/>
 		<mapper resource="mapper/boxweekly.xml"/>
 	</mappers>
 </configuration>
