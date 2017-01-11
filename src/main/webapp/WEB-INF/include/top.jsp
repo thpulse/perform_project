@@ -42,6 +42,9 @@
 							<a href="contact.html"><i class="fa fa-envelope"></i><br>~_~</a>
 						</li>
 						<li>
+							<a href="about.html"><i class="fa fa-user"></i><br>°ü¸®ÀÚ</a>
+						</li>
+						<li>
 							<a href="#" onclick="login" data-toggle="modal" data-target="#myModal"><i class="fa fa-lock"></i><br>Log-in</a>
 						
 						
