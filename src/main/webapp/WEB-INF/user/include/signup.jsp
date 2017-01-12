@@ -271,10 +271,8 @@ a.button {
   							 <label><input type="checkbox" name="user_gerne" value="dance" >Dance</label><br>
   							 <label><input type="checkbox" name="user_gerne" value="ballet" >Ballet</label><br>
   							 <label><input type="checkbox" name="user_gerne" value="gugak" >Gugak</label><br>
-  							 
- 						 
-  					</div>
-  			    </div>
+  						</div>
+  			    	</div>
  			
   
   						 <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>

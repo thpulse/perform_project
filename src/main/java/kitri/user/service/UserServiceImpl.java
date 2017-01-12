@@ -2,6 +2,7 @@ package kitri.user.service;
 
 import kitri.user.dao.UserDAO;
 import kitri.user.vo.UserVO;
+import kitri.user.vo.loginVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,7 +19,11 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void insert(UserVO user) {
 		dao.insert(user);
+	}
 
+	@Override
+	public loginVO login(String id, String pass) {
+		return dao.login(id, pass);
 	}
 
 }

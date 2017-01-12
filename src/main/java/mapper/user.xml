@@ -13,13 +13,12 @@
      								,#{user_email}
      								,#{user_gender}
      								,#{user_gerne})
-     								<!-- ,#{user_play}
-     								,#{user_musical}
-     								,#{user_classic}
-     								,#{user_opera}
-     								,#{user_dance}
-     								,#{user_ballet}
-     								,#{user_gugak})   -->
+     					
     </insert>
+    
+    <select id="login" resultType="login" parameterType="Map">
+    	select * from userinfo where user_id=#{id} and user_pass=#{pass}
+    </select>
+    
 
 </mapper>

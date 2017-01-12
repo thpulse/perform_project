@@ -1,9 +1,11 @@
 package kitri.user.service;
 
 import kitri.user.vo.UserVO;
+import kitri.user.vo.loginVO;
 
 public interface UserService {
 	
-	void insert(UserVO user);
+	loginVO login(String id, String pass);//로그인	
+	void insert(UserVO user);//회원가입
 
 }

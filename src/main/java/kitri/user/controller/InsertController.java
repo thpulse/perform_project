@@ -25,18 +25,12 @@ public class InsertController {
 	@RequestMapping(value="/insert.do",method=RequestMethod.POST)
 	public ModelAndView runInsert(UserVO user){
 		System.out.println(user);
-		
 		if(user.getUser_gerne()==null){
 			user.setUser_gerne("none");
 			service.insert(user);
-			
 		}else{
 			service.insert(user);
 		}
-				
 		return new ModelAndView("redirect:/index.do");
-		
 	}
-	
-	
 }

@@ -1,6 +1,10 @@
 package kitri.user.dao;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import kitri.user.vo.UserVO;
+import kitri.user.vo.loginVO;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +21,17 @@ public class UserDAOImpl implements UserDAO {
 	public void insert(UserVO user) {
 		
 		sqlSession.insert("kitri.perform.user.insert", user);
-				
+	
+	}
 
+	@Override
+	public loginVO login(String user_id, String user_pass) {
+		
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("id", user_id);
+		map.put("pass", user_pass);
+		System.out.println(map);
+		return sqlSession.selectOne("kitri.perform.user.login", map);
 	}
 
 }
