@@ -2,15 +2,17 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	<typeAliases>
-		<typeAlias type="kitri.search.vo.SearchVO" alias="search"/>
+	<typeAliases>		
 		<typeAlias type="kitri.performinfo.boxweekly.dto.BoxWeeklyDTO" alias="box"/>
 		<typeAlias type="kitri.performinfo.performance.dto.PerformanceDTO" alias="perform"/>
 		<typeAlias type="kitri.performinfo.performance.dto.PerformanceSogaeimgDTO" alias="performsogae"/>
+		<typeAlias type="kitri.performinfo.prfplace.dto.PrfplaceDTO" alias="place"/>
+		<typeAlias type="kitri.search.vo.SearchVO" alias="search"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/search.xml"/>
 		<mapper resource="mapper/boxweekly.xml"/>
 		<mapper resource="mapper/performanceinfo.xml"/>
+		<mapper resource="mapper/prfplaceinfo.xml"/>
 	</mappers>
 </configuration>

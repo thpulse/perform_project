@@ -9,7 +9,7 @@ public class DateTest {
 		SimpleDateFormat form = new SimpleDateFormat("yyyyMMdd"); //날짜포멧
 		Calendar cal = Calendar.getInstance();
 		System.out.println(form.format(cal.getTime())); //오늘
-		cal.add(cal.MONTH, 1); //1달뒤로 설정
+		cal.add(Calendar.MONTH, 1); //1달뒤로 설정
 		System.out.println(form.format(cal.getTime())); //1달뒤
 	}
 
