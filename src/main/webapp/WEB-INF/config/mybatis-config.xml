@@ -13,6 +13,4 @@
 		<mapper resource="mapper/boxweekly.xml"/>
 		<mapper resource="mapper/performanceinfo.xml"/>
 	</mappers>
-	<!-- JeonInGyu typeAliases update End -->
-
 </configuration>
