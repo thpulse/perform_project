@@ -7,11 +7,15 @@
 	<typeAliases>
 		<typeAlias type="kitri.search.vo.SearchVO" alias="search"/>
 		<typeAlias type="kitri.performinfo.boxweekly.dto.BoxWeeklyDTO" alias="box"/>
+		<typeAlias type="kitri.user.vo.UserVO" alias="insert"/> 
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/search.xml"/>
 		<mapper resource="mapper/boxweekly.xml"/>
+		<mapper resource="mapper/user.xml"/>
 	</mappers>
 	<!-- JeonInGyu typeAliases update End -->
+	
+	
 
 </configuration>

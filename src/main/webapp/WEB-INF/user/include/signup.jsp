@@ -7,6 +7,8 @@
 	
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+	
+
 
 <style>
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
@@ -50,7 +52,7 @@ html{
 
 .testbox {
   margin: 20px auto;
-  width: 500px; 
+  width: 700px; 
   height: 830px; 
   -webkit-border-radius: 8px/7px; 
   -moz-border-radius: 8px/7px; 
@@ -63,7 +65,7 @@ html{
 }
 .testbox2 {
 	margin: 20px auto;
-   	width: 270px; 
+   	width: 350px; 
    	height: 200px; 
 	background-color: #ebebeb; 
   -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
@@ -124,14 +126,14 @@ label.radio:after {
 input[type=radio]:checked + label:after {
 	opacity: 1;
 }
-
+   
 hr{
   color: #a9a9a9;
   opacity: 0.3;
 }
 
 input[type=text],input[type=password]{
-  width: 270px; 
+  width: 350px; 
   height: 40px; 
   -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
   -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
@@ -212,6 +214,26 @@ a.button {
  
 
 </style>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+ $(document).ready(function(){
+  	$('#pass').keyup(function(){
+   		$('font[name=check]').text('');
+  	});
+
+  	$('#pass2').keyup(function(){
+   		if($('#pass').val()!=$('#pass2').val()){
+    	$('font[name=check]').text('');
+    	$('font[name=check]').html("Password does not match");
+   	}else{
+    	$('font[name=check]').text('');
+    	$('font[name=check]').html("Password match");
+   }
+  });
+ });
+</script>
+
+
 </head>
 
 <body>
@@ -225,62 +247,49 @@ a.button {
                    	<div class="testbox">
   						<h1>Registration</h1>
 
- 					 <form action="/">
+ 					 <form role="form" action="/project_final/insert.do" method="POST">
    
-						<!-- <label id="icon" for="name"><i class="icon-user"></i></label> -->
- 						 <input type="text" name="id" placeholder="Id" required/><br>
-	
-						<!-- <label id="icon" for="name"><i class="icon-shield"></i></label> -->
-  						<input type="password" name="pass" placeholder="Password" required/><br>
-	
-					<!-- 	<label id="icon" for="name"><i class="icon-shield"></i></label> -->
-  						<input type="password" name="pass2" placeholder="Password" required/><br>
-  						
-
-					<!-- 	<label id="icon" for="name"><i class="icon-user"></i></label> -->
-  						<input type="text" name="name" placeholder="Name" required/><br>   
-   
-   						<!--  <label id="icon" for="name"><i class="icon-envelope "></i></label> -->
-  						<input type="text" name="email" placeholder="Email" required/><br>
-  
-  					<!-- 	<label id="icon" for="name"><i class="icon-shield"></i></label> -->
- 						 <input type="text" name="security" pattern="\d{6}\-\d{7}" 
- 						 			title = "123456-1234567 형식으로 입력하세요 "placeholder="SSN" required/><br>
-  
-  					<!-- 	<label id="icon" for="name"><i class="icon-shield"></i></label> -->
- 						 <input type="text" name="tel" placeholder="Tel" required/><br>
-  						<div class="testbox2">
+					
+ 						 <input type="text" name="user_id" placeholder="Id" required/><br>
+						 <input type="password" name="user_pass" id="pass" placeholder="Password" required/><br>
+						 <input type="password" name="user_pass2" id="pass2" placeholder="Confirm Password" required/><br>
+  						 <div><font name="check" size="3" color="red"></font></div>
+  						 <input type="text" name="user_name" placeholder="Name" required/><br>   
+     					 <input type="text" name="user_ssn" placeholder="SSN" required/><br>
+   						 <input type="text" name="user_tel" placeholder="Tel" required/><br>
+ 						 <input type="text" name="user_email" placeholder="Email" required/><br>
+  						 <input type="text" name="user_gender" placeholder="Gender" required/>
+  					
+  					 <div class="testbox2">
   						 <div class="checkbox">
  						 	<label>Gerne Choice</label><br>
-  							<label><input type="checkbox" name="genre" value="play">Play</label><br>
-  							 <label><input type="checkbox" name="genre" value="Musical">Musical</label><br>
-  							 <label><input type="checkbox" name="genre" value="Classic">Classic</label><br>
-  							 <label><input type="checkbox" name="genre" value="Opera">Opera</label><br>
-  							 <label><input type="checkbox" name="genre" value="Dance">Dance</label><br>
-  							 <label><input type="checkbox" name="genre" value="Ballet">Ballet</label><br>
-  							 <label><input type="checkbox" name="genre" value="Gugak">Gugak</label><br>
+  							 
+  							 <label><input type="checkbox" name="user_gerne" value="play" >Play</label><br>
+  							 <label><input type="checkbox" name="user_gerne" value="musical" >Musical</label><br>
+  							 <label><input type="checkbox" name="user_gerne" value="classic" >Classic</label><br>
+  							 <label><input type="checkbox" name="user_gerne" value="opera" >Opera</label><br>
+  							 <label><input type="checkbox" name="user_gerne" value="dance" >Dance</label><br>
+  							 <label><input type="checkbox" name="user_gerne" value="ballet" >Ballet</label><br>
+  							 <label><input type="checkbox" name="user_gerne" value="gugak" >Gugak</label><br>
+  							 
  						 
-  							</div>
-  					 	   </div>
- 						 <div class="gender">
-   						 <input type="radio" value="None" id="male" name="gender" checked/>
-   						 <label for="male" class="radio" chec>Male</label>
-    
-   						 <input type="radio" value="None" id="female" name="gender" />
-    					<label for="female" class="radio">Female</label>
-   						</div>
-   
+  					</div>
+  			    </div>
+ 			
   
   						 <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
-  							 <a href="#" class="button">Register</a>
+  							<input type="submit" value="Register" class="btn btn-success"/>
+  							 <!-- <a href="/project_final/insert.do" class="button">Register</a> -->
  						 </form>
  						
 						</div>
                    
-             </div>
+           		  </div>
                 <div class="col-sm-3" style="background-color:white;"></div>
            </div>
       </div>
+	
+	
 
 </body>
 </html>

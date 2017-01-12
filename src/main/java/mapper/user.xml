@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kitri.perform.user">
+
+	<insert id="insert" parameterType="insert">
+     	insert into userinfo values(#{user_id}
+     								,#{user_pass}
+     								,#{user_pass2}
+     								,#{user_name}
+     								,#{user_ssn}
+     								,#{user_tel}
+     								,#{user_email}
+     								,#{user_gender}
+     								,#{user_gerne})
+     								<!-- ,#{user_play}
+     								,#{user_musical}
+     								,#{user_classic}
+     								,#{user_opera}
+     								,#{user_dance}
+     								,#{user_ballet}
+     								,#{user_gugak})   -->
+    </insert>
+
+</mapper>
