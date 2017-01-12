@@ -110,7 +110,6 @@ $(document).ready(function(){
 			                    <h3>공연선택</h3>
 			                    <p>포스터 + 공연제목</p>
 			                </div>
-	        			
 	        			</div>
 	        		</div>
 	        		<div class="col-sm-6">
