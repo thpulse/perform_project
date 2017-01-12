@@ -72,8 +72,8 @@ ul#simple-menu li a.current:hover{color:#D9E5FF;background:#FFA7A7;}
 <div id="demo-container">
 
 	<ul id="simple-menu">
-		<li><a href="#" title="Home" class="current">Home</a></li>
-		<li><a href="#" title="Home">Resources</a></li>
+		<li><a href="#" title="Home" class="current">예약 확인</a></li>
+		<li><a href="#" title="Home">예약 취소 확인</a></li>
 		<li><a href="#" title="Home">Inspiration</a></li>
 		<li><a href="#" title="Home">Community Forums</a></li>
 		<li><a href="#" title="Home">About Us</a></li>
@@ -88,16 +88,16 @@ ul#simple-menu li a.current:hover{color:#D9E5FF;background:#FFA7A7;}
     
     <div class="row header">
       <div class="cell">
-        Name
+        No
       </div>
       <div class="cell">
-        Age
+                  예매번호
       </div>
       <div class="cell">
-        Occupation
+                  공연명
       </div>
       <div class="cell">
-        Location
+                  예매일
       </div>
     </div>
     

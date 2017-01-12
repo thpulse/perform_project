@@ -26,9 +26,13 @@
 	
 	<definition name="mypage" extends="mypageTemplate"/>
 	
-	<!-- JeonInGyu mypageTemplate update Start -->
+	
 	<definition name="mypageRcheck/list" extends="mypageTemplate">
 		<put-attribute name="content" value="/WEB-INF/mypage/mypage_Rcheck.jsp" />
+	</definition>
+	<!-- JeonInGyu mypageTemplate update Start -->
+	<definition name="searchResult/list" extends="mypageTemplate">
+		<put-attribute name="content" value="/WEB-INF/search/searchResult.jsp" />
 	</definition>
 	<!-- JeonInGyu mypageTemplate update End -->	
 	

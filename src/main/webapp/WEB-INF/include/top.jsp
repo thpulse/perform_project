@@ -64,16 +64,16 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
-						<!-- ingyu 검색창 start -->
+						<!-- ingyu 寃���李� start -->
 						<li>
 							<div class="d1">
-  								<form>
-  									<input type="text" placeholder="검색어 입력">
+  								<form action="/project_final/search/searchResult.do">
+  									<input type="text" placeholder="공연명만 검색">
   										<button type="submit"></button>
   								</form>
 							</div>
 						</li>
-						<!-- ingyu 검색창 end -->
+						<!-- ingyu 寃���李� end -->
 						<li class="dropdown active">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 								<i class="fa fa-home"></i><br>Home <span class="caret"></span>
@@ -84,12 +84,12 @@
 							</ul>
 						</li>
 						<li>
-							<a href="portfolio.html"><i class="fa fa-camera"></i><br>공연정보</a>
+							<a href="portfolio.html"><i class="fa fa-camera"></i><br>怨듭�곗��蹂�</a>
 						</li>
 						<li>
-              <a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>공연예매</a>
+              <a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>怨듭�곗��留�</a>
 						<li>
-							<a href="services.html"><i class="fa fa-tasks"></i><br>공연2.0</a>
+							<a href="services.html"><i class="fa fa-tasks"></i><br>怨듭��2.0</a>
 						</li>
 						<!-- JeonInGyu <a href> update Start -->
 						<li>
@@ -111,9 +111,9 @@
       						<div class="modal-header">
         					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         					
-        					 ���̵� : <input id="login__username" type="text" class="form__input" placeholder="Username" required><br><br>
+        					 占쏙옙占싱듸옙 : <input id="login__username" type="text" class="form__input" placeholder="Username" required><br><br>
         					 
-     					 	  ��й�ȣ : <input id="login__password" type="password" class="form__input" placeholder="Password" required>
+     					 	  占쏙옙橘占싫� : <input id="login__password" type="password" class="form__input" placeholder="Password" required>
      					 	</div>     					
       					 	 <div class="form__field">
          				 			<p><input type="submit" onclick="location.href='/project_final/login.do'" class="btn btn-info" value="Log-In">
