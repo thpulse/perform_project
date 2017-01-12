@@ -10,6 +10,4 @@
 		<mapper resource="mapper/search.xml"/>
 		<mapper resource="mapper/boxweekly.xml"/>
 	</mappers>
-	<!-- JeonInGyu typeAliases update End -->
-
 </configuration>
