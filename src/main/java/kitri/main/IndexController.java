@@ -1,6 +1,9 @@
 package kitri.main;
 
 
+import java.util.List;
+
+import kitri.performinfo.boxweekly.dto.BoxWeeklyDTO;
 import kitri.performinfo.boxweekly.service.BoxWeeklyService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,19 +16,10 @@ public class IndexController{
 	@Autowired
 	BoxWeeklyService service;
 	
-	/*@RequestMapping("/index.do")
+	@RequestMapping("/index.do")
 	public ModelAndView main(BoxWeeklyDTO dto){
 		// ¹Ú½º¿ÀÇÇ½º ÆÄ½Ì °á°ú »Ñ¸²
-		System.out.println("ÀÎµ¦½º"+dto);
 		List<BoxWeeklyDTO> boxlist = service.Total_BoxWeekly(dto);
-		System.out.println(boxlist);
 		return new ModelAndView("index","boxlist",boxlist);
-
-	}*/
-	@RequestMapping("/index.do")
-	public ModelAndView main(){
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("index");
-		return mav;
 	}
 }
