@@ -43,8 +43,10 @@
 		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
 	</definition>
 	
-	<definition name="reservationMain" extends="reservationTemplate">
-	</definition>	
+	<definition name="reservationMain" extends="reservationTemplate"/>
+	<definition name="reservation_seat" extends="reservationTemplate">
+		<put-attribute name="content" 	value="/WEB-INF/reservation/include/seat.jsp"/>
+	</definition>
 	
 	<!-- 몽고DB테스트중 01.06 By.Kimtaehyung -->
 	<definition name="index_mongo" template="/WEB-INF/views_taehyung/index.jsp"/>	
