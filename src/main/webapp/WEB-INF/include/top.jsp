@@ -64,7 +64,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
-						<!-- ingyu 寃���李� start -->
+						<!-- ingyu search start -->
 						<li>
 							<div class="d1">
   								<form action="/project_final/search/searchResult.do">
@@ -73,7 +73,7 @@
   								</form>
 							</div>
 						</li>
-						<!-- ingyu 寃���李� end -->
+						<!-- ingyu search end -->
 						<li class="dropdown active">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 								<i class="fa fa-home"></i><br>Home <span class="caret"></span>
