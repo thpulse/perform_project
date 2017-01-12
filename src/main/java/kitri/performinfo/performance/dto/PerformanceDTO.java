@@ -13,6 +13,7 @@ public class PerformanceDTO {
 	private String prfage;
 	private String tckprice;
 	private String poster;
+	private String story;
 	private String genre;
 	private String prfstate;
 	private String openrun;
@@ -25,7 +26,8 @@ public class PerformanceDTO {
 	public PerformanceDTO(String prfid, String prfnm, String prfpdfrom,
 			String prfpdto, String plcid, String prfcast, String prfcrew,
 			String prfruntime, String prfage, String tckprice, String poster,
-			String genre, String prfstate, String openrun, String prfdaytime) {
+			String story, String genre, String prfstate, String openrun,
+			String prfdaytime) {
 		super();
 		this.prfid = prfid;
 		this.prfnm = prfnm;
@@ -38,6 +40,7 @@ public class PerformanceDTO {
 		this.prfage = prfage;
 		this.tckprice = tckprice;
 		this.poster = poster;
+		this.story = story;
 		this.genre = genre;
 		this.prfstate = prfstate;
 		this.openrun = openrun;
@@ -50,9 +53,9 @@ public class PerformanceDTO {
 				+ ", prfpdfrom=" + prfpdfrom + ", prfpdto=" + prfpdto
 				+ ", plcid=" + plcid + ", prfcast=" + prfcast + ", prfcrew="
 				+ prfcrew + ", prfruntime=" + prfruntime + ", prfage=" + prfage
-				+ ", tckprice=" + tckprice + ", poster=" + poster + ", genre="
-				+ genre + ", prfstate=" + prfstate + ", openrun=" + openrun
-				+ ", prfdaytime=" + prfdaytime + "]";
+				+ ", tckprice=" + tckprice + ", poster=" + poster + ", story="
+				+ story + ", genre=" + genre + ", prfstate=" + prfstate
+				+ ", openrun=" + openrun + ", prfdaytime=" + prfdaytime + "]";
 	}
 
 	public String getPrfid() {
@@ -143,6 +146,14 @@ public class PerformanceDTO {
 		this.poster = poster;
 	}
 
+	public String getstory() {
+		return story;
+	}
+
+	public void setstory(String story) {
+		this.story = story;
+	}
+
 	public String getGenre() {
 		return genre;
 	}
@@ -174,7 +185,5 @@ public class PerformanceDTO {
 	public void setPrfdaytime(String prfdaytime) {
 		this.prfdaytime = prfdaytime;
 	}
-	
-	
 	
 }

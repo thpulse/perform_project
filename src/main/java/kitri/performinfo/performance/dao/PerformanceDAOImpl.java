@@ -74,17 +74,22 @@ public class PerformanceDAOImpl implements PerformanceDAO {
 					}
 				}
 				//소개이미지(styurl)을 제외한 공연정보 insert
+				String story = (String) dbObj.get("sty");
+				if (story.length() > 200) {
+					story = story.substring(0, 200);
+				}
+				
 				PerformanceDTO prfinfo = new PerformanceDTO((String)dbObj.get("mt20id"),(String)dbObj.get("prfnm"),
 															(String)dbObj.get("prfpdfrom"),(String)dbObj.get("prfpdto"),
 															(String)dbObj.get("mt10id"),(String)dbObj.get("prfcast"),
 															(String)dbObj.get("prfcrew"),(String)dbObj.get("prfruntime"),
 															(String)dbObj.get("prfage"),
 															(String)dbObj.get("pcseguidance"),(String)dbObj.get("poster"),
-															(String)dbObj.get("genrenm"),
+															story,(String)dbObj.get("genrenm"),
 															(String)dbObj.get("prfstate"),(String)dbObj.get("openrun"),
 															(String)dbObj.get("dtguidance"));
+				System.out.println(prfinfo);
 				sqlSession.insert("kitri.performance.Add_performance",prfinfo);
-				
 				//소개이미지(styurl) insert
 				PerformanceSogaeimgDTO sogae = null;
 				try{

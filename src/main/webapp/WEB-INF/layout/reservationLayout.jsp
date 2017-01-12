@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
     <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-    <head>
-     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <meta charset="utf-8">
