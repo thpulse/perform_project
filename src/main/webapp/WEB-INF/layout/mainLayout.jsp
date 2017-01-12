@@ -2,9 +2,8 @@
     pageEncoding="EUC-KR"%>
     <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
     <head>
-     <meta charset="utf-8">
+     
   <meta name="viewport" content="width=device-width, initial-scale=1">
-        
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">

@@ -64,10 +64,7 @@
         					 아이디 : <input id="login__username" type="text" class="form__input" placeholder="Username" required><br><br>
         					 
      					 	  비밀번호 : <input id="login__password" type="password" class="form__input" placeholder="Password" required>
-     					 	</div>	
-      					
-      					
-
+     					 	</div>
       					 	 <div class="form__field">
          				 			<p><input type="submit" onclick="location.href='/project_final/login.do'" class="btn btn-info" value="Log-In">
          				 			   <input type="submit" onclick="location.href='/project_final/insert.do'" class="btn btn-info" value="Sign-up"></p>
