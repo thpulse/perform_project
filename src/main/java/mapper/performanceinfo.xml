@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="kitri.performance">
+<mapper namespace="kitri.performanceinfo">
 	<insert id="Add_performance" parameterType="perform">
 		insert into performance values(#{prfid},#{prfnm},#{prfpdfrom},#{prfpdto},#{plcid},#{prfcast},#{prfcrew},#{prfruntime},#{prfage},#{tckprice},#{poster},#{story},#{genre},#{prfstate},#{openrun},#{prfdaytime})
 	</insert>

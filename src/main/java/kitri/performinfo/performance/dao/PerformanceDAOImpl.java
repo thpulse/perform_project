@@ -89,7 +89,7 @@ public class PerformanceDAOImpl implements PerformanceDAO {
 															(String)dbObj.get("prfstate"),(String)dbObj.get("openrun"),
 															(String)dbObj.get("dtguidance"));
 				System.out.println(prfinfo);
-				sqlSession.insert("kitri.performance.Add_performance",prfinfo);
+				sqlSession.insert("kitri.performanceinfo.Add_performance",prfinfo);
 				//소개이미지(styurl) insert
 				PerformanceSogaeimgDTO sogae = null;
 				try{
@@ -100,7 +100,7 @@ public class PerformanceDAOImpl implements PerformanceDAO {
 				}catch(NullPointerException e){
 					sogae = new PerformanceSogaeimgDTO(prfid, "");
 				}
-				sqlSession.insert("kitri.performance.Add_performance_sogaeimgs",sogae);
+				sqlSession.insert("kitri.performanceinfo.Add_performance_sogaeimgs",sogae);
 			}
 			
 		} catch (MalformedURLException e) {

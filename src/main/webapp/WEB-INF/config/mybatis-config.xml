@@ -7,10 +7,12 @@
 		<typeAlias type="kitri.performinfo.boxweekly.dto.BoxWeeklyDTO" alias="box"/>
 		<typeAlias type="kitri.performinfo.performance.dto.PerformanceDTO" alias="perform"/>
 		<typeAlias type="kitri.performinfo.performance.dto.PerformanceSogaeimgDTO" alias="performsogae"/>
+		<typeAlias type="kitri.performinfo.prfplace.dto.PrfplaceDTO" alias="place"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/search.xml"/>
 		<mapper resource="mapper/boxweekly.xml"/>
 		<mapper resource="mapper/performanceinfo.xml"/>
+		<mapper resource="mapper/prfplaceinfo.xml"/>
 	</mappers>
 </configuration>
