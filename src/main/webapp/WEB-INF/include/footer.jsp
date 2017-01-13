@@ -13,8 +13,8 @@
                         <h4>About Us</h4>
                         <div class="footer-box-text">
 	                        <p>
-	                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. 
-	                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+	                        	¿ì¸®´Â ºýºýÀÌ´Ù.
+	                   
 	                        </p>
 	                        <p><a href="about.html">Read more...</a></p>
                         </div>
@@ -41,10 +41,10 @@
                     <div class="col-sm-3 footer-box wow fadeInDown">
                         <h4>Contact Us</h4>
                         <div class="footer-box-text footer-box-text-contact">
-	                        <p><i class="fa fa-map-marker"></i> Address: Via Principe Amedeo 9, 10100, Torino, TO, Italy</p>
-	                        <p><i class="fa fa-phone"></i> Phone: 0039 333 12 68 347</p>
-	                        <p><i class="fa fa-user"></i> Skype: Andia_Agency</p>
-	                        <p><i class="fa fa-envelope"></i> Email: <a href="">contact@andia.co.uk</a></p>
+	                        <p><i class="fa fa-map-marker"></i> Address: ¼­¿ï½Ã ±¸·Î±¸ ÄÚ¿À·Õ2Â÷ºôµù</p>
+	                        <p><i class="fa fa-phone"></i> Phone: 010 2561 9486</p>
+	                        <p><i class="fa fa-user"></i> Skype: iloveseafood</p>
+	                        <p><i class="fa fa-envelope"></i> Email: <a href="">thpulsek@naver.com</a></p>
                         </div>
                     </div>
                 </div>

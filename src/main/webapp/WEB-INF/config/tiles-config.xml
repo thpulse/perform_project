@@ -23,8 +23,18 @@
 		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
 	</definition>
 	
+	
+	<definition name="mypage" extends="mypageTemplate"/>
+	
+	
+	<definition name="mypageRcheck/list" extends="mypageTemplate">
+		<put-attribute name="content" value="/WEB-INF/mypage/mypage_Rcheck.jsp" />
+	</definition>
 	<!-- JeonInGyu mypageTemplate update Start -->
-	<definition name="mypage" extends="mypageTemplate"/>	
+	<definition name="searchResult/list" extends="mypageTemplate">
+		<put-attribute name="content" value="/WEB-INF/search/searchResult.jsp" />
+	</definition>
+	<!-- JeonInGyu mypageTemplate update End -->	
 	
 	<!-- 공연예매 17.01.07 By.kimtaehyung-->
 	<definition name="reservationTemplate" template="/WEB-INF/layout/reservationLayout.jsp">
@@ -33,8 +43,10 @@
 		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
 	</definition>
 	
-	<definition name="reservationMain" extends="reservationTemplate">
-	</definition>	
+	<definition name="reservationMain" extends="reservationTemplate"/>
+	<definition name="reservation_seat" extends="reservationTemplate">
+		<put-attribute name="content" 	value="/WEB-INF/reservation/include/seat.jsp"/>
+	</definition>
 	
 	<!-- 지훈 adminTemplate-->
 	<definition name="adminTemplate" template="/WEB-INF/layout/adminLayout.jsp">
@@ -61,4 +73,13 @@
 	<definition name="register_member" extends="mainTemplate">
 		<put-attribute name="content" value="/WEB-INF/user/include/signup.jsp"/>
 	</definition>
+	
+	<!-- 수정 -->
+	<!-- 관리자페이지 메인 -->
+	<definition name="admin" extends="mainTemplate">
+		<put-attribute name="top" 		value="/WEB-INF/include/top.jsp"/>
+		<put-attribute name="content" 	value="/WEB-INF/admin/ad_main.jsp"/>
+		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
+	</definition>
+	
 </tiles-definitions>

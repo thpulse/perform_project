@@ -17,6 +17,17 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
+
+						<li>
+							<div class="d1">
+  								<form action="/project_final/search/searchResult.do">
+  									<input type="text" placeholder="¬É¬â">
+  										<button type="submit"></button>
+  								</form>
+							</div>
+						</li>
+						<!-- ingyu search end -->
+
 						<li class="dropdown active">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 								<i class="fa fa-home"></i><br>Home <span class="caret"></span>
@@ -27,41 +38,36 @@
 							</ul>
 						</li>
 						<li>
-							<a href="portfolio.html"><i class="fa fa-camera"></i><br>∞¯ø¨¡§∫∏</a>
+							<a href="/project_final/perform/prfinfo/index.do"><i class="fa fa-camera"></i><br>Í≥µÏó∞Ï†ïÎ≥¥</a>
 						</li>
 						<li>
-							<a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>∞¯ø¨øπ∏≈</a>
+							<a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>Í≥µÏó∞ÏòàÎß§</a>
 						</li>
 						<li>
-							<a href="services.html"><i class="fa fa-tasks"></i><br>∞¯ø¨2.0</a>
+							<a href="#"><i class="fa fa-tasks"></i><br>Í≥µÏó∞2.0</a>
 						</li>
 						<li>
-							<a href="about.html"><i class="fa fa-user"></i><br>MyPage</a>
+							<a href="#"><i class="fa fa-user"></i><br>MyPage</a>
 						</li>
 						<li>
-							<a href="contact.html"><i class="fa fa-envelope"></i><br>~_~</a>
+							<a href="#"><i class="fa fa-envelope"></i><br>~_~</a>
 						</li>
 						<li>
 							<a href="/project_final/admin/main.do"><i class="fa fa-user"></i><br>∞¸∏Æ¿⁄</a>
 						</li>
 						<li>
 							<a href="#" onclick="login" data-toggle="modal" data-target="#myModal"><i class="fa fa-lock"></i><br>Log-in</a>
-						
-						
+					
 						<!-- Modal -->
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   							<div class="modal-dialog modal-lg" role="document">
     						<div class="modal-content">
       						<div class="modal-header">
         					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        					
-        					 æ∆¿Ãµ : <input id="login__username" type="text" class="form__input" placeholder="Username" required><br><br>
+        					 ÏïÑÏù¥Îîî : <input id="login__username" type="text" class="form__input" placeholder="Username" required><br><br>
         					 
-     					 	  ∫Òπ–π¯»£ : <input id="login__password" type="password" class="form__input" placeholder="Password" required>
+     					 	  ÎπÑÎ∞ÄÎ≤àÌò∏ : <input id="login__password" type="password" class="form__input" placeholder="Password" required>
      					 	</div>
-      						
-      					
-      					
       					 	 <div class="form__field">
          				 			<p><input type="submit" onclick="location.href='/project_final/login.do'" class="btn btn-info" value="Log-In">
          				 			   <input type="submit" onclick="location.href='/project_final/insert.do'" class="btn btn-info" value="Sign-up"></p>
@@ -77,5 +83,4 @@
 			</div>
 			</div>
 		</nav>
-    </body>
-</html>
+   </body>

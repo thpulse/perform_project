@@ -34,9 +34,12 @@ $(document).ready(function(){
 			}else if(month_Val==2) {
 				for(i = 0; i < day28_Val.length; i++){
 					$("#day_select").append("<option value=" + day28_Val[i] + ">" + day28_Val[i] +"일</option>");	
-				}		  				
+				}u		  				
 			}
 		})
+		
+		
+	}
 	
 })
 
@@ -78,6 +81,25 @@ $(document).ready(function(){
 		        			<div class="service wow fadeInDown">
 			                    <div class="service-icon"><i class="fa fa-magic"></i></div>
 			                    <h3>영화관선택</h3>
+				                    <select class="w3-select" name="tel" id ="selectform1" size= "1">
+										<option value="11">시/도 선택</option>
+										<option value="11">서울특별시</option>
+										<option value="26">부산광역시</option>
+										<option value="27">대구광역시</option>
+										<option value="28">인천광역시</option>
+										<option value="29">광주광역시</option>
+										<option value="30">대전광역시</option>
+										<option value="31">울산광역시</option>
+										<option value="36">세종특별자치시</option>
+										<option value="42">강원도</option>
+										<option value="43">충청북도</option>
+										<option value="44">충청남도</option>
+										<option value="45">전라북도</option>
+										<option value="46">전라남도</option>
+										<option value="47">경상북도</option>
+										<option value="48">경상남도</option>
+										<option value="50">제주특별자치도</option>
+									</select>
 			                    <p>영화관이 여기에뿌려지도록 한다. / 극장 나열</p>
 			                </div>
 	        			
@@ -88,21 +110,27 @@ $(document).ready(function(){
 			                    <h3>공연선택</h3>
 			                    <p>포스터 + 공연제목</p>
 			                </div>
-	        			
 	        			</div>
 	        		</div>
 	        		<div class="col-sm-6">
 	        			 <div class="service wow fadeInDown">
 			                    <div class="service-icon"><i class="fa fa-print"></i></div>
-			                    <h3>공연시간선택</h3>
-			                    <p>공연시간선택</p>
-			                    <p>공연시간선택</p>
-			                    <p>공연시간선택</p>
-			                    <p>공연시간선택</p>
-			                    <p>공연시간선택</p>
-			                    <p>공연시간선택</p>
-			                    <p>공연시간선택</p>
-			                    <p>공연시간선택</p>
+			                    <table class="table">
+			                    	<thead>
+			                    		<tr>
+			                    			<th>상영시간</th>
+			                    			<th>공연명</th>
+			                    			<th>관/남은좌석</th>			                    		
+			                    		</tr>			                    		
+			                    	</thead>
+			                    	<tbody>
+			                    		<tr>
+			                    			<td>19:00~21:00</td>
+			                    			<td>놀부띠</td>
+			                    			<td>30/100</td>			                    			
+			                    		</tr>
+			                    	</tbody>		                    
+			                    </table>
 			             </div>	        		
 	        		</div>
 	        		<div class="col-sm-6">
