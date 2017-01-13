@@ -5,10 +5,12 @@
 	<typeAliases>
 		<typeAlias type="kitri.search.vo.SearchVO" alias="search"/>
 		<typeAlias type="kitri.performinfo.boxweekly.dto.BoxWeeklyDTO" alias="box"/>
+		<typeAlias type="kitri.pro.area.dto.AreaVO" alias="area"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/search.xml"/>
 		<mapper resource="mapper/boxweekly.xml"/>
+		<mapper resource="mapper/weather.xml"/>
 	</mappers>
 	<!-- JeonInGyu typeAliases update End -->
 

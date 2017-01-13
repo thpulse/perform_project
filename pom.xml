@@ -187,8 +187,13 @@
 		    <artifactId>json</artifactId>
 		    <version>20150729</version>
 		</dependency>
-		
-		
+		<!-- 지훈 jsoup -->
+		<!-- http://mvnrepository.com/artifact/org.jsoup/jsoup -->
+		<dependency>
+   			<groupId>org.jsoup</groupId>
+    		<artifactId>jsoup</artifactId>
+    		<version>1.7.2</version>
+		</dependency>
 
 	</dependencies>
 	<build>
