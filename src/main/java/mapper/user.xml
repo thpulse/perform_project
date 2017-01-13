@@ -12,7 +12,8 @@
      								,#{user_tel}
      								,#{user_email}
      								,#{user_gender}
-     								,#{user_gerne})
+     								,#{user_gerne}
+     								,1)
      					
     </insert>
     
@@ -24,5 +25,9 @@
     	select * from userinfo
     </select>
     
+    <!-- <update id="delete" parameterType="user">
+    	delete from userinfo where user_id=#{id}
+    </update>
+     -->
 
 </mapper>

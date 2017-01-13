@@ -20,7 +20,7 @@ public class UserDAOImpl implements UserDAO {
 	
 	@Override
 	public void insert(UserVO user) {
-		
+		System.out.println(user);
 		sqlSession.insert("kitri.perform.user.insert", user);
 	
 	}
@@ -41,9 +41,10 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@Override
-	public List<UserVO> delete(String user_id) {
+	public void delete(String id) {
+		sqlSession.selectList("kitri.perform.user.delete");
 		
-		return null;
 	}
 
+	
 }

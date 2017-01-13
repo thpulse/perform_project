@@ -33,4 +33,12 @@ public class UserServiceImpl implements UserService {
 		return dao.userList();
 	}
 
+	@Override
+	public void delete(String id) {
+		dao.delete(id);
+		
+	}
+
+	
+
 }

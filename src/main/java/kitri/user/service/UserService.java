@@ -10,5 +10,5 @@ public interface UserService {
 	loginVO login(String id, String pass);//로그인	
 	void insert(UserVO user);//회원가입
 	List<UserVO> userList();//user리스트
-
+	void delete(String id);//회원삭제
 }
