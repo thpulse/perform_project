@@ -5,4 +5,4 @@
  * @author Windows7
  *
  */
-package kitri.reservation.vo;
+package kitri.reservation.dao;
