@@ -31,4 +31,11 @@ public class PerformanceController {
 		List<PerformanceDTO> prflist = service.Total_Performance(prf);
 		return new ModelAndView("perform_prf","prflist",prflist);
 	}
+	
+	@RequestMapping("/perform/prfinfo/read.do")
+	public ModelAndView Performance_Info(PerformanceDTO prf){
+		PerformanceDTO prfRes = service.Performance_Info(prf);
+		System.out.println(prfRes);
+		return new ModelAndView("perform_prf_info","prf",prfRes);
+	}
 }

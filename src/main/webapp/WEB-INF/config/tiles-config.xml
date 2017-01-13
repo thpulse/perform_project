@@ -82,5 +82,9 @@
 	<definition name="perform_prf" extends="perform_main">
 		<put-attribute name="content" value="/WEB-INF/performinfo/performanceinfo/main.jsp"/>
 	</definition>
+	<!-- 공연정보 공연리스트 -->
+	<definition name="perform_prf_info" extends="perform_main">
+		<put-attribute name="content" value="/WEB-INF/performinfo/performanceinfo/read.jsp"/>
+	</definition>
 	
 </tiles-definitions>

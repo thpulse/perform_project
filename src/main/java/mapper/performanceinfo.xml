@@ -10,5 +10,11 @@
 	</insert>
 	<select id="Total_performance" resultType="perform" parameterType="perform">
 		select * from performance
+		<if test="genre!=null">
+			where genre=#{genre}
+		</if>
+	</select>
+	<select id="Performance_Info" resultType="perform" parameterType="perform">
+		select * from performance where plcid=#{plcid}
 	</select>
 </mapper>

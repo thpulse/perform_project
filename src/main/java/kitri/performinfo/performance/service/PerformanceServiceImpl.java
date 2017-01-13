@@ -23,4 +23,9 @@ public class PerformanceServiceImpl implements PerformanceService {
 		return dao.Total_Performance(prf);
 	}
 
+	@Override
+	public PerformanceDTO Performance_Info(PerformanceDTO prf) {
+		return dao.Performance_Info(prf);
+	}
+
 }

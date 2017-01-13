@@ -124,4 +124,9 @@ public class PerformanceDAOImpl implements PerformanceDAO {
 		return sqlSession.selectList("kitri.performanceinfo.Total_performance",prf);
 	}
 
+	@Override
+	public PerformanceDTO Performance_Info(PerformanceDTO prf) {
+		return sqlSession.selectOne("kitri.performanceinfo.Performance_Info",prf);
+	}
+
 }

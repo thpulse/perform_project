@@ -10,4 +10,6 @@ public interface PerformanceService {
 
 	List<PerformanceDTO> Total_Performance(PerformanceDTO prf);
 
+	PerformanceDTO Performance_Info(PerformanceDTO prf);
+
 }
