@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-
 <%@ page import="kitri.user.vo.*" %>
     <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -100,7 +99,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="/project_final/perform/prfinfo/index.do"><i class="fa fa-camera"></i><br>공연정보</a>
+							<a href="/project_final/perform/prfinfo/select.do"><i class="fa fa-camera"></i><br>공연정보</a>
 						</li>
 						<li>
 							<a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>공연예매</a>

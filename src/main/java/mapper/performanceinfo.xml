@@ -8,4 +8,7 @@
 	<insert id="Add_performance_sogaeimgs" parameterType="performsogae">
 		insert into performance_sogaeimg values(#{prfid},#{styurl})
 	</insert>
+	<select id="Total_performance" resultType="perform" parameterType="perform">
+		select * from performance
+	</select>
 </mapper>
