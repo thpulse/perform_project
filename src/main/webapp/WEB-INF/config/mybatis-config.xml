@@ -4,14 +4,17 @@
 <configuration>
 	<typeAliases>		
 		<typeAlias type="kitri.performinfo.boxweekly.dto.BoxWeeklyDTO" alias="box"/>
+		<typeAlias type="kitri.pro.area.dto.AreaVO" alias="area"/>
 		<typeAlias type="kitri.performinfo.performance.dto.PerformanceDTO" alias="perform"/>
 		<typeAlias type="kitri.performinfo.performance.dto.PerformanceSogaeimgDTO" alias="performsogae"/>
 		<typeAlias type="kitri.performinfo.prfplace.dto.PrfplaceDTO" alias="place"/>
 		<typeAlias type="kitri.search.vo.SearchVO" alias="search"/>
 	</typeAliases>
-	<mappers>
+	
+  <mappers>
 		<mapper resource="mapper/search.xml"/>
 		<mapper resource="mapper/boxweekly.xml"/>
+		<mapper resource="mapper/weather.xml"/>
 		<mapper resource="mapper/performanceinfo.xml"/>
 		<mapper resource="mapper/prfplaceinfo.xml"/>
 	</mappers>

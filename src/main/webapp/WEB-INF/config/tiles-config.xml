@@ -48,6 +48,16 @@
 		<put-attribute name="content" 	value="/WEB-INF/reservation/include/seat.jsp"/>
 	</definition>
 	
+	<!-- 지훈 adminTemplate-->
+	<definition name="adminTemplate" template="/WEB-INF/layout/adminLayout.jsp">
+		<put-attribute name="top" 		value="/WEB-INF/include/top.jsp"/>
+		<put-attribute name="content" 	value="/WEB-INF/admin/admin_main.jsp"/>
+		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
+	</definition>
+	
+	<definition name="adminMain" extends="adminTemplate">
+	</definition>
+	
 	<!-- 몽고DB테스트중 01.06 By.Kimtaehyung -->
 	<definition name="index_mongo" template="/WEB-INF/views_taehyung/index.jsp"/>	
 	<definition name="list_mongo" template="/WEB-INF/views_taehyung/list.jsp"/>	

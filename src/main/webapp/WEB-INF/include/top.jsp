@@ -12,7 +12,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">Andia - a super cool design agency...</a>
+					<a class="navbar-brand" href="/project_final/index.do">Andia - a super cool design agency...</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
@@ -33,7 +33,7 @@
 								<i class="fa fa-home"></i><br>Home <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu dropdown-menu-left" role="menu">
-								<li class="active"><a href="index.html">Home</a></li>
+								<li class="active"><a href="/project_final/index.do">Home</a></li>
 								<li><a href="index-2.html">Home 2</a></li>
 							</ul>
 						</li>
@@ -51,6 +51,9 @@
 						</li>
 						<li>
 							<a href="#"><i class="fa fa-envelope"></i><br>~_~</a>
+						</li>
+						<li>
+							<a href="/project_final/admin/main.do"><i class="fa fa-user"></i><br>°ü¸®ÀÚ</a>
 						</li>
 						<li>
 							<a href="#" onclick="login" data-toggle="modal" data-target="#myModal"><i class="fa fa-lock"></i><br>Log-in</a>
