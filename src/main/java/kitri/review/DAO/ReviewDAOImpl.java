@@ -15,11 +15,12 @@ public class ReviewDAOImpl implements ReviewDAO{
 	
 	@Override
 	public void insert(ReviewVO review) {
-		int main = sqlSession.insert("kitri.perform.review", review);
+		System.out.println(review);
+		sqlSession.insert("kitri.review.write", review);
 	}
 
 	@Override
-	public void delete(ReviewVO reviewno) {
+	public void delete(ReviewVO revno) {
 		
 	}
 
@@ -29,14 +30,9 @@ public class ReviewDAOImpl implements ReviewDAO{
 	}
 
 	@Override
-	public void read(ReviewVO reviewinfo) {
-		
-	}
-
-	@Override
-	public List<ReviewVO> readall(int reviewno) {
-		
-		return null;
+	public List<ReviewVO> readall() {
+		System.out.println("이것도해조라");
+		return sqlSession.selectList("kitri.review.list");
 	}
 
 	@Override

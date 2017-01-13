@@ -8,11 +8,10 @@
 	<definition name="mainTemplate" template="/WEB-INF/layout/mainLayout.jsp">
 		<put-attribute name="top" 		value="/WEB-INF/include/top.jsp"/>
 		<put-attribute name="content" 	value="/WEB-INF/include/content.jsp"/>
-		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>
-		
+		<put-attribute name="footer" 	value="/WEB-INF/include/footer.jsp"/>	
 	</definition>
   
-  <definition name="index" extends="mainTemplate">
+    <definition name="index" extends="mainTemplate">
 	</definition>		
  
   <!--인규	-->
@@ -45,8 +44,12 @@
 	<definition name="search_mongo" template="/WEB-INF/views_taehyung/mongo_search.jsp"/>
 	
 	<!-- review 01.09 By.KangJeongA -->
-	<definition name="review/Reviewinsert" template="/WEB-INF/review/Reviewinsert.jsp"/> 
-  
+	<definition name="review_insert" extends="mainTemplate">
+		<put-attribute name="content" 	value="/WEB-INF/review/include/Reviewinsert.jsp"/>		
+	</definition>
+	<definition name="review_list" extends="mainTemplate">
+		<put-attribute name="content" 	value="/WEB-INF/review/include/Reviewlist.jsp"/>		
+	</definition>
   <!-- 승현 -->
 	<definition name="register_member" extends="mainTemplate">
 		<put-attribute name="content" value="/WEB-INF/user/include/signup.jsp"/>

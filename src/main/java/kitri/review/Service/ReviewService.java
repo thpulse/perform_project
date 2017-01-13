@@ -6,10 +6,9 @@ import kitri.review.VO.ReviewVO;
 
 public interface ReviewService {
 	public void insert(ReviewVO review);
-	public void delete(ReviewVO reviewno);
+	public void delete(ReviewVO revno);
 	public void update(ReviewVO reviewcomment);
-	public void read(ReviewVO reviewinfo);
-	List<ReviewVO> readall(int reviewno);
+	List<ReviewVO> readall();
 	List<ReviewVO> readpfr(String pfr_id);
 	List<ReviewVO> readid(String mem_id);
 }

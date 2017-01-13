@@ -1,5 +1,7 @@
 package kitri.review.Controller;
 
+import java.util.List;
+
 import kitri.review.Service.ReviewService;
 import kitri.review.VO.ReviewVO;
 
@@ -10,21 +12,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class ReviewInsertController {
+public class ReviewListController {
 	@Autowired
 	ReviewService service;
 	
-	@RequestMapping(value="/review/write.do",method=RequestMethod.GET)
-	public String insert(){
-		System.out.println("해조");
-		return "review_insert";
+	@RequestMapping("/review/Reviewlist.do")
+	public ModelAndView reviewlist(){ 
+		ModelAndView mav = new ModelAndView();
+		List<ReviewVO> readall = service.readall();
+		mav.addObject("reviewlist", readall);
+		mav.setViewName("review_list");
+		System.out.println("이것도되나");
+		return mav;
 	}
 
-	@RequestMapping(value="/review/write.do",method=RequestMethod.POST)
-	public ModelAndView insert(ReviewVO user){
-		System.out.println("확인");
-		service.insert(user);
-		return new ModelAndView("redirect:/review/Reviewlist.do");
-	}
-	
 }

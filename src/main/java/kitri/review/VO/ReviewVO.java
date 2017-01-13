@@ -21,6 +21,19 @@ public class ReviewVO {
 				+ ", mem_id=" + mem_id + ", revgood=" + revgood + ", revbad="
 				+ revbad + ", prf_id=" + prf_id + "]";
 	}
+	
+	public ReviewVO(int revno, int revgrade, String revcomment, String revdate,
+			String mem_id, int revgood, int revbad, String prf_id) {
+		super();
+		this.revno = revno;
+		this.revgrade = revgrade;
+		this.revcomment = revcomment;
+		this.revdate = revdate;
+		this.mem_id = mem_id;
+		this.revgood = revgood;
+		this.revbad = revbad;
+		this.prf_id = prf_id;
+	}
 
 	public int getRevno() {
 		return revno;
@@ -28,6 +41,7 @@ public class ReviewVO {
 
 	public void setRevno(int revno) {
 		this.revno = revno;
+		System.out.println("no");
 	}
 
 	public int getRevgrade() {
@@ -36,6 +50,7 @@ public class ReviewVO {
 
 	public void setRevgrade(int revgrade) {
 		this.revgrade = revgrade;
+		System.out.println("grade");
 	}
 
 	public String getRevcomment() {
@@ -44,6 +59,7 @@ public class ReviewVO {
 
 	public void setRevcomment(String revcomment) {
 		this.revcomment = revcomment;
+		System.out.println("comment");
 	}
 
 	public String getRevdate() {
@@ -52,6 +68,7 @@ public class ReviewVO {
 
 	public void setRevdate(String revdate) {
 		this.revdate = revdate;
+		System.out.println("date");
 	}
 
 	public String getMem_id() {
@@ -60,6 +77,7 @@ public class ReviewVO {
 
 	public void setMem_id(String mem_id) {
 		this.mem_id = mem_id;
+		System.out.println("mem");
 	}
 
 	public int getRevgood() {
@@ -68,6 +86,7 @@ public class ReviewVO {
 
 	public void setRevgood(int revgood) {
 		this.revgood = revgood;
+		System.out.println("good");
 	}
 
 	public int getRevbad() {
@@ -76,6 +95,7 @@ public class ReviewVO {
 
 	public void setRevbad(int revbad) {
 		this.revbad = revbad;
+		System.out.println("bad");
 	}
 
 	public String getPrf_id() {
@@ -84,6 +104,7 @@ public class ReviewVO {
 
 	public void setPrf_id(String prf_id) {
 		this.prf_id = prf_id;
+		System.out.println("prf");
 	}
 
 }

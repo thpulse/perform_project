@@ -19,8 +19,8 @@ public class ReviewServiceImpl implements ReviewService{
 	}
 
 	@Override
-	public void delete(ReviewVO reviewno) {
-		dao.delete(reviewno);
+	public void delete(ReviewVO revno) {
+		dao.delete(revno);
 	}
 
 	@Override
@@ -29,13 +29,9 @@ public class ReviewServiceImpl implements ReviewService{
 	}
 
 	@Override
-	public void read(ReviewVO reviewinfo) {
-		dao.read(reviewinfo);
-	}
-
-	@Override
-	public List<ReviewVO> readall(int reviewno) {
-		return dao.readall(reviewno);
+	public List<ReviewVO> readall() {
+		System.out.println("실행해조라");
+		return dao.readall();
 	}
 
 	@Override
