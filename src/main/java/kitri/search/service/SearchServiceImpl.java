@@ -14,9 +14,9 @@ public class SearchServiceImpl implements SearchService {
 	SearchDAO dao;
 	
 	@Override
-	public List<SearchVO> search(String Sword) {
+	public List<SearchVO> search(String tag, String Sword) {
 		// TODO Auto-generated method stub
-		return dao.search(Sword);
+		return dao.search(tag, Sword);
 	}
 
 }

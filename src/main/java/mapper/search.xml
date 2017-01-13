@@ -3,8 +3,16 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- JeonInGyu mapper update Start -->
 <mapper namespace="kitri.perform.search">
-	<select id="search_test" resultType="search" parameterType="map">
-		
+	<select id="list" resultType="search" parameterType="map">
+		SELECT * FROM performance
+		<where>
+			<if test="tag=='perform' and search!=''">
+				like '%'||#{search}||'%'
+			</if>
+			<if test="tag=='plcnm' and search!=''">
+				like '%'||#{search}||'%'
+			</if>
+		</where>
 	</select>
 </mapper>
 
