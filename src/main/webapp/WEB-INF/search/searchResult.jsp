@@ -1,18 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <style type="text/css">
-	body {
-  background-color: #91ced4;
-}
-body * {
-  box-sizing: border-box;
-}
-
 .header {
   background-color: #761A1A;
   color: white;
@@ -29,7 +23,8 @@ img {
 }
 
 .table-users {
-  border: 1px solid #327a81;
+  border: 2px solid #761A1A;
+  
   border-radius: 10px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
   max-width: calc(100% - 2em);
@@ -39,10 +34,12 @@ img {
 }
 
 table {
+
   width: 100%;
 }
 table td, table th {
-  color: #2b686e;
+  
+  color: #008299;
   padding: 10px;
 }
 table td {
@@ -174,47 +171,29 @@ table tr:nth-child(2n+1) {
 <body>
 	<div class="table-users">
    <div class="header">통합검색</div>
-
+   <%-- <c:forEach var="prf" items="Slist"> --%>
    <table>
       <tr>
-         <th>공연명</th>
-         <th>공연출연진</th>
-         <th>장르</th>
-         <th>런타임</th>
+         <th></th>
+         <th>공연 이름</th>
+         <th>공연 시작일</th>
+         <th>공연 종료일</th>
+         <th>출연진</th>
+         <th>줄거리</th>
          <th width="230">줄거리</th>
+         <th>공연 중</th>
       </tr>
 
       <tr>
-         <td><img src="http://lorempixel.com/100/100/people/1" alt="" /></td>
-         <td>Jane Doe</td>
-         <td>jane.doe@foo.com</td>
-         <td>01 800 2000</td>
-         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </td>
+         <td><!-- ${prf.poster } --></td>
+         <td><!-- ${prf.prfnm } --></td>
+         <td><!-- ${prf.prfpdfrom } --></td>
+         <td><!-- ${prf.prfpdto } --></td>
+         <td><!-- ${prf.ptfcast } --></td>
+         <td><!-- ${prf.story } --></td>
+         <td><!-- ${prf.prfstats } --></td>
       </tr>
 
-      <tr>
-         <td><img src="http://lorempixel.com/100/100/sports/2" alt="" /></td>
-         <td>John Doe</td>
-         <td>john.doe@foo.com</td>
-         <td>01 800 2000</td>
-         <td>Blanditiis, aliquid numquam iure voluptatibus ut maiores explicabo ducimus neque, nesciunt rerum perferendis, inventore.</td>
-      </tr>
-
-      <tr>
-         <td><img src="http://lorempixel.com/100/100/people/9" alt="" /></td>
-         <td>Jane Smith</td>
-         <td>jane.smith@foo.com</td>
-         <td>01 800 2000</td>
-         <td> Culpa praesentium unde pariatur fugit eos recusandae voluptas.</td>
-      </tr>
-
-      <tr>
-         <td><img src="http://lorempixel.com/100/100/people/3" alt="" /></td>
-         <td>John Smith</td>
-         <td>john.smith@foo.com</td>
-         <td>01 800 2000</td>
-         <td>Aut voluptatum accusantium, eveniet, sapiente quaerat adipisci consequatur maxime temporibus quas, dolorem impedit.</td>
-      </tr>
    </table>
 </div>
 </body>
