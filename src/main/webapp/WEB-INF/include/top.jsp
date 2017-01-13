@@ -2,18 +2,9 @@
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <!-- ingyu search style css udpate start -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>  
-	select {
-	    width: 110px; /* 원하는 너비설정 */
-	    padding: .5em .5em; /* 여백으로 높이 설정 */
-	    font-family: inherit;  /* 폰트 상속 */
-	    background: url('/project_final/assets/img/selected/select.png') no-repeat 100% 25%; /* 네이티브 화살표를 커스텀 화살표로 대체 */
-	    border: 2px solid #99004C;
-	    border-radius: 0px; /* iOS 둥근모서리 제거 */
-	    -webkit-appearance: none; /* 네이티브 외형 감추기 */
-	    -moz-appearance: none;
-	    appearance: none;
-	}
+	
 
 	* {box-sizing: border-box;}  
 		body{margin: 0;}  
@@ -72,9 +63,10 @@
 					<ul class="nav navbar-nav navbar-right">
 						<!-- ingyu search start -->
 						<li>
+						
 							<div class="d1">
   								<form action="/project_final/search/searchResult.do">
-  								<select name="tag">
+  								<select class="selectpicker" name="tag">
   									<option value="perform">공연</option>
 									<option value="plcnm">공연장</option>
 								</select>
