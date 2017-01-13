@@ -18,6 +18,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Repository;
 
 @Repository("prfdao")
@@ -74,33 +75,40 @@ public class PerformanceDAOImpl implements PerformanceDAO {
 					}
 				}
 				//소개이미지(styurl)을 제외한 공연정보 insert
-				String story = (String) dbObj.get("sty");
-				if (story.length() > 200) {
-					story = story.substring(0, 200);
+				try{
+					String story = (String) dbObj.get("sty");
+					if (story.length() > 200) {
+						story = story.substring(0, 200);
+					}
+					
+					PerformanceDTO prfinfo = new PerformanceDTO((String)dbObj.get("mt20id"),(String)dbObj.get("prfnm"),
+																(String)dbObj.get("prfpdfrom"),(String)dbObj.get("prfpdto"),
+																(String)dbObj.get("mt10id"),(String)dbObj.get("prfcast"),
+																(String)dbObj.get("prfcrew"),(String)dbObj.get("prfruntime"),
+																(String)dbObj.get("prfage"),
+																(String)dbObj.get("pcseguidance"),(String)dbObj.get("poster"),
+																story,(String)dbObj.get("genrenm"),
+																(String)dbObj.get("prfstate"),(String)dbObj.get("openrun"),
+																(String)dbObj.get("dtguidance"));
+					sqlSession.insert("kitri.performanceinfo.Add_performance",prfinfo);
+					System.out.println(prfinfo);
+				}catch(DuplicateKeyException e){
+					System.out.println("이미 DB에 저장된 정보입니다.");
 				}
 				
-				PerformanceDTO prfinfo = new PerformanceDTO((String)dbObj.get("mt20id"),(String)dbObj.get("prfnm"),
-															(String)dbObj.get("prfpdfrom"),(String)dbObj.get("prfpdto"),
-															(String)dbObj.get("mt10id"),(String)dbObj.get("prfcast"),
-															(String)dbObj.get("prfcrew"),(String)dbObj.get("prfruntime"),
-															(String)dbObj.get("prfage"),
-															(String)dbObj.get("pcseguidance"),(String)dbObj.get("poster"),
-															story,(String)dbObj.get("genrenm"),
-															(String)dbObj.get("prfstate"),(String)dbObj.get("openrun"),
-															(String)dbObj.get("dtguidance"));
-				System.out.println(prfinfo);
-				sqlSession.insert("kitri.performanceinfo.Add_performance",prfinfo);
 				//소개이미지(styurl) insert
 				PerformanceSogaeimgDTO sogae = null;
 				try{
 					for (int j = 0; j < styurls.size(); j++) {
 						styurl = styurls.get(j);
 						sogae = new PerformanceSogaeimgDTO(prfid, styurl);
+						sqlSession.insert("kitri.performanceinfo.Add_performance_sogaeimgs",sogae);
 					}
 				}catch(NullPointerException e){
 					sogae = new PerformanceSogaeimgDTO(prfid, "");
+					sqlSession.insert("kitri.performanceinfo.Add_performance_sogaeimgs",sogae);
 				}
-				sqlSession.insert("kitri.performanceinfo.Add_performance_sogaeimgs",sogae);
+				
 			}
 			
 		} catch (MalformedURLException e) {
@@ -109,6 +117,11 @@ public class PerformanceDAOImpl implements PerformanceDAO {
 			e.printStackTrace();
 		}
 			
+	}
+
+	@Override
+	public List<PerformanceDTO> Total_Performance(PerformanceDTO prf) {
+		return sqlSession.selectList("kitri.performanceinfo.Total_performance",prf);
 	}
 
 }

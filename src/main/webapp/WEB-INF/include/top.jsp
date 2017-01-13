@@ -38,7 +38,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="/project_final/perform/prfinfo/index.do"><i class="fa fa-camera"></i><br>공연정보</a>
+							<a href="/project_final/perform/prfinfo/select.do"><i class="fa fa-camera"></i><br>공연정보</a>
 						</li>
 						<li>
 							<a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>공연예매</a>
