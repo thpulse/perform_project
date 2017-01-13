@@ -3,7 +3,7 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kitri.perform.user">
 
-	<insert id="insert" parameterType="insert">
+	<insert id="insert" parameterType="user">
      	insert into userinfo values(#{user_id}
      								,#{user_pass}
      								,#{user_pass2}
@@ -18,6 +18,10 @@
     
     <select id="login" resultType="login" parameterType="Map">
     	select * from userinfo where user_id=#{id} and user_pass=#{pass}
+    </select>
+    
+    <select id="list" resultType="user">
+    	select * from userinfo
     </select>
     
 

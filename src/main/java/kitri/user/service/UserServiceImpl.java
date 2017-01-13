@@ -1,5 +1,7 @@
 package kitri.user.service;
 
+import java.util.List;
+
 import kitri.user.dao.UserDAO;
 import kitri.user.vo.UserVO;
 import kitri.user.vo.loginVO;
@@ -24,6 +26,11 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public loginVO login(String id, String pass) {
 		return dao.login(id, pass);
+	}
+
+	@Override
+	public List<UserVO> userList() {
+		return dao.userList();
 	}
 
 }

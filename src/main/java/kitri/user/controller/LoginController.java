@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import kitri.user.service.UserService;
+import kitri.user.vo.UserVO;
 import kitri.user.vo.loginVO;
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<%@ page import="kitri.user.vo.loginVO" %>
+<%@ page import="kitri.user.vo.*" %>
     <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <body>
     <%loginVO user = (loginVO) session.getAttribute("loginUser"); %>
+    <%-- <%UserVO user2 = (UserVO) session.getAttribute("loginUser"); %> --%>
 		 <!-- Top menu -->
 		<nav class="navbar" role="navigation">
 			<div class="container">
@@ -44,6 +45,14 @@
 						<li>
 							<a href="contact.html"><i class="fa fa-envelope"></i><br>Contact</a>
 						</li>
+					<%-- 	<%if(loginUser==null){ %>
+						<%}else if(loginUser.getUser_Id().equals("racer")){ %> --%>
+						
+						<li>
+							<a href="/project_final/list.do" onclick="list"><i class="fa fa-user"></i><br>회원관리</a>
+						</li>
+					<%-- 	<%} %> --%>
+						
 						<li>
 							<c:if test="${loginUser.user_id==null}">
 							<a href="#" onclick="login" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock"></i><br>Log-in</a>

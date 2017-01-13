@@ -1,6 +1,7 @@
 package kitri.user.dao;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import kitri.user.vo.UserVO;
@@ -32,6 +33,17 @@ public class UserDAOImpl implements UserDAO {
 		map.put("pass", user_pass);
 		System.out.println(map);
 		return sqlSession.selectOne("kitri.perform.user.login", map);
+	}
+
+	@Override
+	public List<UserVO> userList() {
+		return sqlSession.selectList("kitri.perform.user.list");
+	}
+
+	@Override
+	public List<UserVO> delete(String user_id) {
+		
+		return null;
 	}
 
 }

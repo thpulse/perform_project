@@ -51,4 +51,7 @@
 	<definition name="register_member" extends="mainTemplate">
 		<put-attribute name="content" value="/WEB-INF/user/include/signup.jsp"/>
 	</definition>
+	<definition name="list_member" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/user/include/userlist.jsp"/>	
+	</definition>
 </tiles-definitions>
