@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
     <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-    <head>
-     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-        
         <!-- CSS -->
+        
+        
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
@@ -62,11 +61,15 @@ background:#933 url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-on
 		
 			<tiles:insertAttribute name="top"/>		
 		<div class="col-sm-2 sidenav">
+			<!-- JeonInGyu 170110 update Start -->
 			<tiles:insertAttribute name="mypage_menu"/>
+			<!-- JeonInGyu 170110 update End -->
 		</div>
         <!-- Slider -->
   		<div class="col-sm-10"> 
-            <tiles:insertAttribute name="mypage_content"/>
+  			
+            <tiles:insertAttribute name="content"/>
+            
  		</div>
         <!-- Footer -->
 
