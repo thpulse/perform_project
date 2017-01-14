@@ -1,10 +1,10 @@
-package kitri.reservation.service;
+package kitri.reservation.dao;
 
 import java.util.List;
 
 import kitri.performinfo.prfplace.dto.PrfplaceDTO;
 
-public interface reservationService {
+public interface reservationDAO {
 	List<PrfplaceDTO> call_hall_bySido(String sido);
 
 }

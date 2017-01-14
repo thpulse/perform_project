@@ -3,9 +3,8 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- JeonInGyu mapper update Start -->
 <mapper namespace="kitri.reservation">
-	<select id="call_hall_bySido" parameterType="place">
-		
-		
+	<select id="call_hall_bySido" parameterType="String" resultType="place">
+		select * from prf_place where sidonm = #{sido}		
 	</select>
 </mapper>
 

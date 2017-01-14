@@ -15,4 +15,9 @@ public class reservationController {
 	public String seat(){
 		return "reservation_seat";
 	}
+	
+	@RequestMapping("/reservation/find_hall_sido.do")
+	public String find_hall_bysido(){
+		return "reservation_seat";
+	}
 }

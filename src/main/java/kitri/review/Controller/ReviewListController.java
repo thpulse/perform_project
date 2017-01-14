@@ -16,7 +16,7 @@ public class ReviewListController {
 	@Autowired
 	ReviewService service;
 	
-	@RequestMapping("/review/Reviewlist.do")
+	/*@RequestMapping("/review/Reviewlist.do")
 	public ModelAndView reviewlist(){ 
 		ModelAndView mav = new ModelAndView();
 		List<ReviewVO> readall = service.readall();
@@ -24,6 +24,6 @@ public class ReviewListController {
 		mav.setViewName("review_list");
 		System.out.println("이것도되나");
 		return mav;
-	}
+	}*/
 
 }
