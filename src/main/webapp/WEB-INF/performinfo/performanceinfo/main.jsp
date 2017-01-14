@@ -15,7 +15,7 @@
 			
 			<!-- 장르선택 -->
 			<div class="row">
-				<div class="col-sm-12 portfolio-filters wow fadeInLeft">
+				<div class="col-sm-10 portfolio-filters wow fadeInLeft">
 					<a href="/project_final/perform/prfinfo/select.do">All</a> / 
 					<a href='/project_final/perform/prfinfo/select.do?genre=<%=URLEncoder.encode("연극","euc-kr") %>'>연극</a> / 
 					<a href='/project_final/perform/prfinfo/select.do?genre=<%=URLEncoder.encode("뮤지컬","euc-kr") %>'>뮤지컬</a> /
