@@ -1,5 +1,8 @@
 package kitri.reservation.controller;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -12,6 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import kitri.performinfo.performance.dto.PerformanceDTO;
 import kitri.performinfo.prfplace.dto.PrfplaceDTO;
@@ -34,8 +40,10 @@ public class reservationController {
 		return "reservation_seat";
 	}
 	
-	@RequestMapping("/reservation/find_hall_sido.do")
-	public String find_hall_bysido(String sido_Val){
+	@RequestMapping(value="/reservation/find_hall_sido.do",
+					method=RequestMethod.GET,
+					produces="application/json;charset=utf-8")
+	public @ResponseBody String find_hall_bysido(@RequestParam String sido_Val){
 		//시, 도를 받아온다 받은 시코드를 기반 지역명을 얻기.
 		HashMap<String, String> sido = new HashMap<String, String>();
 		sido.put("11", "서울");
@@ -66,40 +74,80 @@ public class reservationController {
 		JSONObject gungu_json = new JSONObject();
 		JSONArray gungu_json_list = new JSONArray();
 		JSONArray gungu_plc_list = new JSONArray();
+		JSONArray gungu_plcId_list = new JSONArray();
 		List<String> placeList = new ArrayList<String>();
 		for(int i=0; i < dtolist.size(); i++){
 			PrfplaceDTO dto = dtolist.get(i);
 			//입력받은 시, 도와 같은 공연장만 걸러낸다.
 			if(dto.getSidonm().equals(sidoName)){
 				placeList.add(dto.getGugunnm());
-				//gungu_json_list.add(dto.getGugunnm());
+				gungu_plcId_list.add(dto.getPlcid());
 				gungu_plc_list.add(dto.getPlcnm());
 			}			
 		}
 		//중복된 구,군 제거
 		List<String> uniqueItems = new ArrayList<String>(new HashSet<String>(placeList));
-		System.out.println(uniqueItems);
+		for(int i=0; i < uniqueItems.size(); i++){
+			gungu_json_list.add(uniqueItems.get(i));
+		}
 		gungu_json.put("gungu_json_list", gungu_json_list);
 		gungu_json.put("gungu_plc_list", gungu_plc_list);
-		System.out.println(gungu_json.toString());
+		gungu_json.put("gungu_plcId_list",gungu_plcId_list);
 		//받은 공연장 정보를 JSON으로 변환해서 리턴해준다. 
-		return "reservationMain";
+		return gungu_json.toJSONString();
 	}
 	
-	@RequestMapping("/reservation/find_hall_gungu.do")
-	public String find_hall_bygungu(){
+	@RequestMapping(value="/reservation/find_hall_gungu.do",
+						method=RequestMethod.GET,
+						produces="application/json;charset=utf-8")
+	public @ResponseBody String find_hall_bygungu(@RequestParam String gungu_Val) throws IOException {
 		//구 를 받아온다.
-		String val="";
+		String result = URLDecoder.decode(gungu_Val,"UTF-8");
 		//구 에 공연장 정보를 받아온다.
-		List<PrfplaceDTO> dtolist = reservService.call_hall_bySido(val);
+		List<PrfplaceDTO> dtolist = reservService.call_hall_bygungu(result);
+		JSONObject plc_json = new JSONObject();
+		JSONArray plc_list = new JSONArray();
+		JSONArray plcId_list = new JSONArray();
 		for(int i=0; i < dtolist.size(); i++){
 			PrfplaceDTO dto = dtolist.get(i);
 			//입력받은 "구"와 같은 공연장만 걸러낸다.
-			if(dto.getSidonm().equals(val)){
-				System.out.println(i + ":" + dto.getPlcnm());					
+			if(dto.getGugunnm().equals(result)){
+				plc_list.add(dto.getPlcnm());
+				plcId_list.add(dto.getPlcid());
 			}			
 		}
+		plc_json.put("plc_list",plc_list);
+		plc_json.put("plcId_list",plcId_list);
 		//받은 공연장 정보를 JSON으로 변환해서 리턴해준다. 
-		return "reservationMain";
+		return plc_json.toJSONString();
 	}
+	
+	//영화관 선택 후 
+	@RequestMapping(value="/reservation/find_prf.do",
+			method=RequestMethod.GET,
+			produces="application/json;charset=utf-8")
+	public @ResponseBody String find_prf(@RequestParam String plcId_Val){
+		List<PerformanceDTO> dtolist = reservService.call_performInfo_byhallId(plcId_Val);
+		JSONObject plc_json = new JSONObject();
+		JSONArray plc_list = new JSONArray();
+		
+		if(dtolist.size() > 0) {
+			for(int i=0; i < dtolist.size(); i++){
+				JSONObject plc_json_item = new JSONObject();
+				plc_json_item.put("poster", dtolist.get(i).getPoster());
+				plc_json_item.put("prfnm", dtolist.get(i).getPrfnm());
+				plc_json_item.put("plcid", dtolist.get(i).getPrfid());
+				plc_list.add(plc_json_item);
+			}
+		}	
+		plc_json.put("plc_list", plc_list);
+		return plc_json.toJSONString();
+	}
+	
+	
+	
+	
+	
+	
+	
 }

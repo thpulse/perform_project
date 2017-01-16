@@ -9,11 +9,11 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-	    day31_Val = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
-		day30_Val = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,30];
-		day28_Val = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28];
-		day29_Val = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29];
+		$(document).ready(function(){
+		    day31_Val = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+			day30_Val = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,30];
+			day28_Val = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28];
+			day29_Val = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29];
 		
 		$("#month_select").change(function(){
 			var month_Val = $("#month_select option:selected").val();
@@ -40,23 +40,66 @@ $(document).ready(function(){
 		//시,도를 보낸다.
 		$("#selectform1").change(function() {
 			$.get("/project_final/reservation/find_hall_sido.do", {
-				"sido_Val" : $("#selectform1 option:selected").val()}, after_sido, "json");
+				"sido_Val" : $("#selectform1 option:selected").val()},after_sido, "json");
 		});
-		
-	
-})
+		$("#selectform2").change(function() {
+			var gungu_Val2=$("#selectform2 option:selected").val();
+			$.get("/project_final/reservation/find_hall_gungu.do", {
+				"gungu_Val" : encodeURI(gungu_Val2)},after_gungu, "json");
+		});
+		$("#selectform3").change(function() {
+			var plcId=$("#selectform3 option:selected").val();
+			$.get("/project_final/reservation/find_prf.do", {
+				"plcId_Val" : $("#selectform3 option:selected").val()},after_prf, "json");
+		});
+	})		
 		function after_sido(txt) {
-				alert(txt);
-				/* var result_json_list = txt.gungu_json;
-				var length = result_json_list.length;		
-				//select box 초기화
-				$("#selectform2").find("option").remove();
-				for(i = 0; i < length; i++){
-					var admCode = result_json_list[i].admCode
-					var codeName = result_json_list[i].lowestAdmCodeNm
-					$("#selectform2").append("<option value=" + admCode+ ">" + codeName +"</option>");
-				}	 */
+			var gungu_val = txt.gungu_json_list;	
+			var plc_val = txt.gungu_plc_list;
+			var plcId_val = txt.gungu_plcId_list;
+			
+			var gungu_length = gungu_val.length;	
+			var plc_val_length = plc_val.length;	
+			//select box 초기화
+			$("#selectform2").find("option").remove();
+			for(i = 0; i < gungu_length; i++){
+				var gungu = gungu_val[i];
+				$("#selectform2").append("<option value="+gungu+">"+ gungu +"</option>");
+			}			
+			$("#selectform3").find("option").remove();
+			for(i = 0; i < plc_val_length; i++){
+				var plc = plc_val[i];
+				var plcId = plcId_val[i];
+				$("#selectform3").append("<option value="+plcId+">"+ plc +"</option>");
 			}
+		}
+		function after_gungu(txt) {
+			var plc_val = txt.plc_list;	
+			var plcId_val = txt.plcId_list;	
+			
+			var plc_val_length = plc_val.length;
+			var plcId_val_length = plcId_val.length;	
+			//select box 초기화
+			$("#selectform3").find("option").remove();
+			for(i = 0; i < plc_val_length; i++){
+				var plc = plc_val[i];
+				var plcId= plcId_val[i];
+				$("#selectform3").append("<option value="+plcId+">"+ plc +"</option>");
+			}			
+		}
+		function after_prf(txt) {				
+			var plc_obj_arr = txt.plc_list;	
+			var plc_obj_length = plc_obj_arr.length;	
+			
+			//select box 초기화
+			$("#prf_detail_show").remove();
+			for(i = 0; i < plc_val_length; i++){
+				var plc = plc_val[i];
+				var plcId= plcId_val[i];
+				$("#selectform3").append("<option value="+plcId+">"+ plc +"</option>");
+			}		 */	
+		}
+		
 
 </script>
 <body>
@@ -116,6 +159,12 @@ $(document).ready(function(){
 									<option value="48">경상남도</option>
 									<option value="50">제주특별자치도</option>
 								</select>
+								<select class="w3-select" name="tel2" id = "selectform2" size = "1">
+									<option value="default">시/군/구 선택</option>
+								</select>
+								<select class="w3-select" name="tel3" id = "selectform3" size = "1">
+									<option value="default">영화관 선택</option>
+								</select>	
 			                    <button type="button" class="btn btn-link" onclick="location.href='/project_final/reservation/find_hall_sido.do' ">공연장출력</button>
 			                </div>
 	        			
@@ -124,7 +173,7 @@ $(document).ready(function(){
 	        				<div class="service wow fadeInUp">
 			                    <div class="service-icon"><i class="fa fa-magic"></i></div>
 			                    <h3>공연선택</h3>
-			                    <p>포스터 + 공연제목</p>
+			                    <div id = "prf_detail_show"/>
 			                </div>
 	        			
 	        			</div>
