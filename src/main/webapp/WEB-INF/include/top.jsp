@@ -12,7 +12,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">Andia - a super cool design agency...</a>
+					<a class="navbar-brand" href="/project_final/index.do">Andia - a super cool design agency...</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
@@ -38,13 +38,13 @@
 							</ul>
 						</li>
 						<li>
-							<a href="/project_final/perform/prfinfo/index.do"><i class="fa fa-camera"></i><br>공연정보</a>
+							<a href="/project_final/perform/prfinfo/index.do"><i class="fa fa-camera"></i><br>Perform_Info</a>
 						</li>
 						<li>
-							<a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>공연예매</a>
+							<a href="/project_final/reservation/main.do"><i class="fa fa-comments"></i><br>Reservation</a>
 						</li>
 						<li>
-							<a href="#"><i class="fa fa-tasks"></i><br>공연2.0</a>
+							<a href="#"><i class="fa fa-tasks"></i><br>Perform2.0</a>
 						</li>
 						<li>
 							<a href="#"><i class="fa fa-user"></i><br>MyPage</a>

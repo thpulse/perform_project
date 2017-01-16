@@ -37,8 +37,26 @@ $(document).ready(function(){
 				}		  				
 			}
 		})
+		//시,도를 보낸다.
+		$("#selectform1").change(function() {
+			$.get("/project_final/reservation/find_hall_sido.do", {
+				"sido_Val" : $("#selectform1 option:selected").val()}, after_sido, "json");
+		});
+		
 	
 })
+		function after_sido(txt) {
+				alert(txt);
+				/* var result_json_list = txt.gungu_json;
+				var length = result_json_list.length;		
+				//select box 초기화
+				$("#selectform2").find("option").remove();
+				for(i = 0; i < length; i++){
+					var admCode = result_json_list[i].admCode
+					var codeName = result_json_list[i].lowestAdmCodeNm
+					$("#selectform2").append("<option value=" + admCode+ ">" + codeName +"</option>");
+				}	 */
+			}
 
 </script>
 <body>
@@ -78,7 +96,27 @@ $(document).ready(function(){
 		        			<div class="service wow fadeInDown">
 			                    <div class="service-icon"><i class="fa fa-magic"></i></div>
 			                    <h3>영화관선택</h3>
-			                    <p>영화관이 여기에뿌려지도록 한다. / 극장 나열</p>
+			                    <select class="w3-select" name="tel" id = "selectform1" size= "1">
+									<option value="11">시/도 선택</option>
+									<option value="11">서울</option>
+									<option value="41">경기</option>
+									<option value="26">부산</option>
+									<option value="27">대구</option>
+									<option value="28">인천</option>
+									<option value="29">광주</option>
+									<option value="30">대전</option>
+									<option value="31">울산</option>
+									<option value="36">세종시</option>
+									<option value="42">강원도</option>
+									<option value="43">충청북도</option>
+									<option value="44">충청남도</option>
+									<option value="45">전라북도</option>
+									<option value="46">전라남도</option>
+									<option value="47">경상북도</option>
+									<option value="48">경상남도</option>
+									<option value="50">제주특별자치도</option>
+								</select>
+			                    <button type="button" class="btn btn-link" onclick="location.href='/project_final/reservation/find_hall_sido.do' ">공연장출력</button>
 			                </div>
 	        			
 	        			</div>
