@@ -1,8 +1,11 @@
 package kitri.search.controller;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.List;
 
 import kitri.search.service.SearchService;
+import kitri.search.vo.SearchVO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,11 +19,13 @@ public class SearchController {
 	SearchService service;
 	
 	@RequestMapping("/search/searchResult.do")
-	public ModelAndView search(String tag, String Sword){
+	public ModelAndView search(String tag, String Sword) throws Exception{
+		System.out.println(tag + ", " + Sword);
 		ModelAndView mav = new ModelAndView();
-		//List<SearchVO> Plist = service.search(tag ,Sword);
+		List<SearchVO> Plist = service.search(tag ,Sword);
 		
-		//mav.addObject("Plist", Plist);
+		System.out.println(Plist);
+		mav.addObject("Plist", Plist);
 		mav.setViewName("searchResult/list");
 		
 		return mav;

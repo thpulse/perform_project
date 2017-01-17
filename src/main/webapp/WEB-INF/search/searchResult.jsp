@@ -6,7 +6,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<style type="text/css">
+<style>
+#customers
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:300px;
+margin-left: 1200px;
+border-collapse:collapse;
+
+}
+#customers td, #customers th 
+{
+font-size:1em;
+border:1px solid #98bf21;
+padding:3px 7px 2px 7px;
+}
+#customers th 
+{
+font-size:1.1em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#A7C942;
+color:#ffffff;
+}
+#customers tr.alt td 
+{
+color:#000000;
+background-color:#EAF2D3;
+}
+
+<!-- 여기 -->
 .header {
   background-color: #761A1A;
   color: white;
@@ -169,9 +199,25 @@ table tr:nth-child(2n+1) {
 </style>
 </head>
 <body>
+	<table id="customers">
+<tr>
+  <th>순위</th>
+  <th>검색어</th>
+
+</tr>
+<tr>
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>
+
+</tr>
+
+
+</table>
+
+
 	<div class="table-users">
    <div class="header">통합검색</div>
-   <%-- <c:forEach var="prf" items="Slist"> --%>
+  
    <table>
       <tr>
          <th></th>
@@ -183,18 +229,19 @@ table tr:nth-child(2n+1) {
          <th width="230">줄거리</th>
          <th>공연 중</th>
       </tr>
-
+	   <c:forEach var="prf" items="${Plist}">
       <tr>
-         <td><!-- ${prf.poster } --></td>
-         <td><!-- ${prf.prfnm } --></td>
-         <td><!-- ${prf.prfpdfrom } --></td>
-         <td><!-- ${prf.prfpdto } --></td>
-         <td><!-- ${prf.ptfcast } --></td>
-         <td><!-- ${prf.story } --></td>
-         <td><!-- ${prf.prfstats } --></td>
+         <td><img src="${prf.poster }"></td>
+         <td>${prf.prfnm }</td>
+         <td>${prf.prfpdfrom }</td>
+         <td>${prf.prfpdto }</td>
+         <td>${prf.ptfcast }</td>
+         <td>${prf.story }</td>
+         <td>${prf.prfstats }</td>
       </tr>
-
+	  </c:forEach>
    </table>
+  
 </div>
 </body>
 </html>

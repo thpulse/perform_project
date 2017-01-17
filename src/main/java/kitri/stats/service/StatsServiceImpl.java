@@ -14,9 +14,9 @@ public class StatsServiceImpl implements StatsService {
 	StatsDAO dao;
 	
 	@Override
-	public List<StatsVO> stats(String userid) {
+	public List<StatsVO> stats() {
 		// TODO Auto-generated method stub
-		return dao.stats(userid);
+		return dao.stats();
 	}
 
 }

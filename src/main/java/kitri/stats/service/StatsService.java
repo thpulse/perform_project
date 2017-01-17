@@ -5,5 +5,5 @@ import java.util.List;
 import kitri.stats.vo.StatsVO;
 
 public interface StatsService {
-	List<StatsVO> stats(String userid);
+	List<StatsVO> stats();
 }

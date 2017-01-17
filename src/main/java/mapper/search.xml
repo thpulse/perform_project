@@ -6,11 +6,11 @@
 	<select id="list" resultType="search" parameterType="map">
 		SELECT * FROM performance
 		<where>
-			<if test="tag=='perform' and search!=''">
-				like '%'||#{search}||'%'
+			<if test="tag=='prfnm' and search!=''">
+				prfnm like '%'||#{search}||'%'
 			</if>
 			<if test="tag=='plcnm' and search!=''">
-				like '%'||#{search}||'%'
+				plcnm like '%'||#{search}||'%'
 			</if>
 		</where>
 	</select>
